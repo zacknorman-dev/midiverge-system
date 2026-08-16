@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated scan output
+current_scan.json
+
+# Debug and log files
+*.log
+overlay_received.log
+
+# Python virtual environment
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+desktop.ini
