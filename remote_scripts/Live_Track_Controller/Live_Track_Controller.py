@@ -151,6 +151,14 @@ class Live_Track_Controller(ControlSurface):
         """Reload JSON mappings after Scanner updates"""
         self._cc_mappings = self._load_json_mappings()
         self.log_message('LTC: Mappings reloaded from JSON')
+        
+        # Notify overlay to reload as well
+        selected_track = self.song().view.selected_track
+        self._send_udp({
+            'type': 'track_changed',
+            'track_name': selected_track.name if selected_track else 'Unknown'
+        })
+        self.log_message('LTC: Sent track_changed to overlay after reload')
     
     def _get_mixer_parameter(self, track, lom_path):
         """Get mixer parameter (Volume, Pan, Sends) from track"""
