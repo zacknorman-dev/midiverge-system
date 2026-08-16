@@ -18,6 +18,7 @@ Button 10 (CC89): Manual rescan trigger
 
 import json
 import os
+import socket
 
 import Live
 from _Framework.ControlSurface import ControlSurface
@@ -39,6 +40,16 @@ class Live_Track_Controller(ControlSurface):
         self._saved_values = {}   # {track_index: {lom_path_key: float}}
         self._user_mappings = {}  # {device_class: {param_tag: param_name}}
         self._previous_track_index = None  # Track the previous track for save/restore
+        
+        # UDP socket for overlay updates
+        try:
+            self._udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            self._udp_enabled = True
+            self.log_message('LTC: UDP socket initialized for overlay updates')
+        except Exception as e:
+            self._udp_socket = None
+            self._udp_enabled = False
+            self.log_message('LTC: Could not create UDP socket: %s' % str(e))
 
         self._user_mappings = self._load_user_mappings()
         self._cc_mappings = self._load_json_mappings()
@@ -195,6 +206,17 @@ class Live_Track_Controller(ControlSurface):
     
     # ── Track Change Listener ─────────────────────────────────────────────────
     
+    def _send_udp(self, message_dict):
+        """Send UDP message to overlay (port 9001)"""
+        if not self._udp_enabled or not self._udp_socket:
+            return
+        
+        try:
+            message_json = json.dumps(message_dict)
+            self._udp_socket.sendto(message_json.encode('utf-8'), ('127.0.0.1', 9001))
+        except Exception as e:
+            self.log_message('LTC: UDP send error: %s' % str(e))
+    
     def _on_selected_track_changed(self):
         """Called automatically when track selection changes (any method)."""
         self.log_message('LTC: Track changed - triggering save/restore')
@@ -209,6 +231,13 @@ class Live_Track_Controller(ControlSurface):
             self._previous_track_index = all_tracks.index(self.song().view.selected_track)
         except ValueError:
             self._previous_track_index = None
+        
+        # Send track_changed message to overlay
+        selected_track = self.song().view.selected_track
+        self._send_udp({
+            'type': 'track_changed',
+            'track_name': selected_track.name if selected_track else 'Unknown'
+        })
         
         # Defer the restore operation to avoid "Changes cannot be triggered by notifications" error
         self._tasks.add(lambda delta: self._restore_current_track())
