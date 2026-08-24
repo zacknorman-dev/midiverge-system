@@ -36,21 +36,34 @@ class Live_Track_Controller(ControlSurface):
 
     def __init__(self, c_instance):
         super().__init__(c_instance)
+        self._c_instance = c_instance  # CRITICAL: needed by build_midi_map()
         self._cc_mappings = {}    # {cc_int: [(track_index, lom_path_list)]}
         self._saved_values = {}   # {track_index: {lom_path_key: float}}
         self._user_mappings = {}  # {device_class: {param_tag: param_name}}
         self._previous_track_index = None  # Track the previous track for save/restore
+        self._udp_socket = None
+        self._udp_enabled = False
+        
+        self.log_message('LTC: Init starting - deferring full setup...')
+        
+        # Defer initialization to avoid blocking Ableton startup
+        self.schedule_message(2, self._deferred_init)
+    
+    def _deferred_init(self):
+        """Complete initialization after Ableton is fully loaded"""
+        self.log_message('LTC: Deferred init starting...')
         
         # UDP socket for overlay updates
         try:
             self._udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             self._udp_enabled = True
-            self.log_message('LTC: UDP socket initialized for overlay updates')
+            self.log_message('LTC: UDP socket initialized')
         except Exception as e:
             self._udp_socket = None
             self._udp_enabled = False
             self.log_message('LTC: Could not create UDP socket: %s' % str(e))
 
+        # Load mappings (file I/O - safe to do now)
         self._user_mappings = self._load_user_mappings()
         self._cc_mappings = self._load_json_mappings()
         
@@ -66,25 +79,27 @@ class Live_Track_Controller(ControlSurface):
             self.song().view.add_selected_track_listener(
                 self._on_selected_track_changed)
 
-        self.log_message('Live Track Controller loaded with auto track-change listener')
+        self.log_message('LTC: Fully loaded with auto track-change listener')
         self.request_rebuild_midi_map()
 
     def disconnect(self):
-        # Remove listener to prevent memory leaks
-        if self.song().view.selected_track_has_listener(
-            self._on_selected_track_changed):
-            self.song().view.remove_selected_track_listener(
-                self._on_selected_track_changed)
+        # Remove listener to prevent memory leaks (only if it was added)
+        try:
+            if self.song().view.selected_track_has_listener(
+                self._on_selected_track_changed):
+                self.song().view.remove_selected_track_listener(
+                    self._on_selected_track_changed)
+        except:
+            pass  # Song might not be available or listener never added
         super().disconnect()
 
     # ── MIDI map ──────────────────────────────────────────────────────────────
 
     def build_midi_map(self, midi_map_handle):
-        # Intercept CC79 (track selection) and CC89 (rescan button)
+        # Intercept CC79 (track selection) only
+        # CC89 (rescan) is handled by MIDI_Map_Scanner
         Live.MidiMap.forward_midi_cc(
             self._c_instance.handle(), midi_map_handle, 0, TRACK_SELECT_CC)
-        Live.MidiMap.forward_midi_cc(
-            self._c_instance.handle(), midi_map_handle, 0, SAVE_RESCAN_CC)
 
         super().build_midi_map(midi_map_handle)
 
@@ -100,8 +115,6 @@ class Live_Track_Controller(ControlSurface):
         if cc == TRACK_SELECT_CC:
             # CC79: Track selection (relative: 1=CW, 127=CCW)
             self._handle_track_selection(value)
-        elif cc == SAVE_RESCAN_CC and value == 127:  # Button press only
-            self._handle_save_and_rescan()
         else:
             super().receive_midi(midi_bytes)
     
@@ -131,33 +144,49 @@ class Live_Track_Controller(ControlSurface):
         self.log_message('LTC: CC79 - Selected track %d: %s' % (new_index, tracks[new_index].name))
     
     def _handle_save_and_rescan(self):
-        """Handle CC89: Save project and reload mappings"""
-        self.log_message('LTC: CC89 - Save and rescan triggered')
+        """Handle CC89: Manual rescan - triggers Scanner and notifies overlay"""
+        self.log_message('LTC: CC89 - Manual rescan triggered')
         
-        # Save the project (triggers Scanner to re-run automatically)
-        if self.song().file_path:
-            try:
-                self.song().save()
-                self.log_message('LTC: Project saved, Scanner will update mappings')
-                
-                # Schedule reload after Scanner has time to process (1 second delay)
-                self.schedule_message(60, self._reload_mappings)  # 60 ticks = ~1 second
-            except Exception as e:
-                self.log_message('LTC: Error saving project: %s' % str(e))
-        else:
-            self.log_message('LTC: Project not saved yet - save project first, then use CC89')
-    
-    def _reload_mappings(self):
-        """Reload JSON mappings after Scanner updates"""
+        # Send scan_start to show popup
+        self._send_udp({
+            'type': 'scan_start',
+            'message': 'Scanning MIDI mappings...'
+        })
+        
+        # Find and trigger Scanner
+        scanner_found = False
+        for cs in self.application().control_surfaces:
+            if cs.__class__.__name__ == 'MidiMapScanner':
+                self.log_message('LTC: Triggering Scanner...')
+                cs._scan_and_write()
+                scanner_found = True
+                break
+        
+        if not scanner_found:
+            self.log_message('LTC: WARNING - Scanner not found!')
+            self._send_udp({
+                'type': 'scan_complete',
+                'error': 'Scanner not found',
+                'total_mappings': 0
+            })
+            return
+        
+        # Reload mappings from fresh JSON
         self._cc_mappings = self._load_json_mappings()
         self.log_message('LTC: Mappings reloaded from JSON')
         
-        # Notify overlay to reload as well
-        selected_track = self.song().view.selected_track
+        # Clear saved values (fresh start)
+        self._saved_values.clear()
+        self.log_message('LTC: Saved values cleared - will resave on next track switch')
+        
+        # Send scan_complete to trigger overlay wipe+reload
+        total_mappings = sum(len(entries) for entries in self._cc_mappings.values())
         self._send_udp({
-            'type': 'track_changed',
-            'track_name': selected_track.name if selected_track else 'Unknown'
+            'type': 'scan_complete',
+            'total_mappings': total_mappings
         })
+        
+        self.log_message('LTC: Scan complete - %d total mappings' % total_mappings)
         self.log_message('LTC: Sent track_changed to overlay after reload')
     
     def _get_mixer_parameter(self, track, lom_path):
@@ -327,7 +356,11 @@ class Live_Track_Controller(ControlSurface):
             return {}
 
     def _save_track_by_index(self, track_index):
-        """Save all mapped parameter values for a specific track by index."""
+        """Save ALL mixer parameters and ALL rack macros for a track.
+        
+        This approach saves everything regardless of MIDI mappings, making it
+        reliable and independent of the XML scan.
+        """
         all_tracks = (list(self.song().tracks)
                       + list(self.song().return_tracks)
                       + [self.song().master_track])
@@ -335,80 +368,53 @@ class Live_Track_Controller(ControlSurface):
         if track_index < 0 or track_index >= len(all_tracks):
             return
 
+        track = all_tracks[track_index]
         values = {}
-        for cc, entries in self._cc_mappings.items():
-            self.log_message('LTC: [SAVE] Checking CC%d (%d entries)' % (cc, len(entries)))
-            for entry in entries:
-                if entry['track_idx'] == track_index:
-                    self.log_message('LTC: [SAVE] CC%d matches track %d, device=%s, param_idx=%d' 
-                                   % (cc, track_index, entry['device_class'], entry['param_index']))
+        
+        # Save mixer parameters
+        if hasattr(track, 'mixer_device'):
+            mixer = track.mixer_device
+            
+            # Volume
+            if hasattr(mixer, 'volume'):
+                key = 'mixer_volume'
+                values[key] = mixer.volume.value
+                self.log_message('LTC: Saving Volume = %.3f' % mixer.volume.value)
+            
+            # Pan
+            if hasattr(mixer, 'panning'):
+                key = 'mixer_pan'
+                values[key] = mixer.panning.value
+                self.log_message('LTC: Saving Pan = %.3f' % mixer.panning.value)
+            
+            # Sends
+            if hasattr(mixer, 'sends'):
+                for send_idx, send in enumerate(mixer.sends):
+                    key = 'mixer_send_%d' % send_idx
+                    values[key] = send.value
+                    self.log_message('LTC: Saving Send %d = %.3f' % (send_idx, send.value))
+        
+        # Save ALL macros from ALL racks on this track
+        if hasattr(track, 'devices'):
+            for dev_idx, device in enumerate(track.devices):
+                # Check if device is a rack (has macros_mapped)
+                if hasattr(device, 'macros_mapped') and hasattr(device, 'parameters'):
+                    dev_name = device.name if hasattr(device, 'name') else 'Device%d' % dev_idx
+                    self.log_message('LTC: Found rack "%s" with %d macros' % (dev_name, len(device.macros_mapped)))
                     
-                    # Check for mixer parameters (Volume, Pan, Sends, etc.)
-                    if entry.get('is_mixer_param') or (entry['lom_path'] and entry['lom_path'][0] == 'mixer_device'):
-                        mixer_param = self._get_mixer_parameter(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if mixer_param is not None:
-                            param_name = entry.get('param_live_name', 'Mixer Param')
-                            self.log_message('LTC: Saving mixer param %s = %.3f' % (param_name, mixer_param.value))
-                            values[self._lom_path_key(entry['lom_path'])] = mixer_param.value
-                        else:
-                            self.log_message('LTC: Could not resolve mixer parameter')
-                        continue  # Skip to next entry
-                    
-                    # Check for ChainSelector special case
-                    if self._is_chain_selector_param(entry['lom_path']):
-                        chain_sel = self._get_chain_selector_property(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if chain_sel:
-                            self.log_message('LTC: [DEBUG] About to SAVE ChainSelector for track %d' % entry['track_idx'])
-                            val = chain_sel['get']()
-                            self.log_message('LTC: [DEBUG] Got val=%s (type=%s)' % (str(val), type(val).__name__))
-                            key = self._lom_path_key(entry['lom_path'])
-                            self.log_message('LTC: [DEBUG] Saving ChainSelector with key="%s", value=%d' % (key, val))
-                            self.log_message('LTC: Saving ChainSelector = %d' % val)
-                            values[key] = val
-                            self.log_message('LTC: [DEBUG] Stored in dict, values[key]=%s (type=%s)' % (str(values[key]), type(values[key]).__name__))
-                        else:
-                            self.log_message('LTC: Could not resolve ChainSelector')
-                    # Check for MacroControls special case
-                    elif self._is_macro_control_param(entry['lom_path']):
-                        macro_param = self._get_macro_control_parameter(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if macro_param is not None:
-                            param_name = entry['lom_path'][-1] if entry['lom_path'] else '?'
-                            self.log_message('LTC: Saving %s = %.3f' % (param_name, macro_param.value))
-                            values[self._lom_path_key(entry['lom_path'])] = macro_param.value
-                        else:
-                            self.log_message('LTC: Could not resolve MacroControl')
-                    else:
-                        # Regular parameter - try device ID method first
-                        param = None
-                        if entry['param_index'] >= 0:
-                            param = self._find_parameter_by_device_id(
-                                all_tracks[entry['track_idx']], 
-                                entry['device_class'],
-                                entry['device_name'],
-                                entry['device_path'],
-                                entry['param_index']
-                            )
-                        
-                        # Fallback: If param_index was -1 or device ID method failed, try LOM path navigation
-                        if param is None and entry['lom_path']:
-                            self.log_message('LTC: [SAVE] Trying LOM path fallback for %s' % entry['lom_path'][-1])
-                            param = self._find_parameter_by_lom_path(
-                                all_tracks[entry['track_idx']],
-                                entry['lom_path']
-                            )
-                        
-                        if param is not None:
-                            param_name = entry['lom_path'][-1] if entry['lom_path'] else '?'
-                            self.log_message('LTC: Saving %s = %.3f' % (param_name, param.value))
-                            values[self._lom_path_key(entry['lom_path'])] = param.value
-                        else:
-                            self.log_message('LTC: Could not resolve for save: %s on %s' 
-                                           % (entry['device_class'], entry['device_name']))
+                    # Save all 8 macros (parameters[1-8], skipping parameters[0] which is "Device On")
+                    for macro_idx in range(len(device.macros_mapped)):
+                        param_idx = macro_idx + 1  # +1 to skip "Device On"
+                        if param_idx < len(device.parameters):
+                            param = device.parameters[param_idx]
+                            key = 'device_%d_macro_%d' % (dev_idx, macro_idx)
+                            values[key] = param.value
+                            param_name = param.name if hasattr(param, 'name') else 'Macro%d' % macro_idx
+                            self.log_message('LTC: Saving %s [%s] = %.3f' % (dev_name, param_name, param.value))
 
         if values:
             self._saved_values[track_index] = values
             self.log_message('LTC: Saved %d params for track %d' % (len(values), track_index))
-            self.log_message('LTC: [DEBUG] Saved dictionary keys: %s' % str(values.keys()))
 
     def _save_current_track(self):
         """Save all mapped parameter values for the currently selected track."""
@@ -423,7 +429,10 @@ class Live_Track_Controller(ControlSurface):
             return
 
     def _restore_current_track(self):
-        """Restore saved parameter values for the currently selected track."""
+        """Restore ALL saved mixer parameters and rack macros for the current track.
+        
+        This approach restores everything that was saved, regardless of MIDI mappings.
+        """
         selected = self.song().view.selected_track
         all_tracks = (list(self.song().tracks)
                       + list(self.song().return_tracks)
@@ -438,94 +447,72 @@ class Live_Track_Controller(ControlSurface):
             return
 
         saved = self._saved_values[sel_idx]
-        self.log_message('LTC: [DEBUG] Restoring track %d, saved dictionary: %s' % (sel_idx, str(saved)))
+        track = all_tracks[sel_idx]
         restored = 0
-        for entries in self._cc_mappings.values():
-            for entry in entries:
-                if entry['track_idx'] == sel_idx:
-                    key = self._lom_path_key(entry['lom_path'])
-                    param_name = entry['lom_path'][-1] if entry['lom_path'] else '?'
-                    self.log_message('LTC: [DEBUG] Looking for key "%s" for param %s, saved value=%s' % (key, param_name, str(saved.get(key, 'NOT FOUND'))))
-                    if key not in saved:
-                        self.log_message('LTC: No saved value for %s (key not in dict)' % param_name)
-                        continue
+        
+        # Restore mixer parameters
+        if hasattr(track, 'mixer_device'):
+            mixer = track.mixer_device
+            
+            # Volume
+            if 'mixer_volume' in saved and hasattr(mixer, 'volume'):
+                try:
+                    old_val = mixer.volume.value
+                    new_val = max(mixer.volume.min, min(mixer.volume.max, saved['mixer_volume']))
+                    mixer.volume.value = new_val
+                    self.log_message('LTC: Restoring Volume: %.3f -> %.3f' % (old_val, new_val))
+                    restored += 1
+                except Exception as e:
+                    self.log_message('LTC: Error restoring Volume: %s' % str(e))
+            
+            # Pan
+            if 'mixer_pan' in saved and hasattr(mixer, 'panning'):
+                try:
+                    old_val = mixer.panning.value
+                    new_val = max(mixer.panning.min, min(mixer.panning.max, saved['mixer_pan']))
+                    mixer.panning.value = new_val
+                    self.log_message('LTC: Restoring Pan: %.3f -> %.3f' % (old_val, new_val))
+                    restored += 1
+                except Exception as e:
+                    self.log_message('LTC: Error restoring Pan: %s' % str(e))
+            
+            # Sends
+            if hasattr(mixer, 'sends'):
+                for send_idx, send in enumerate(mixer.sends):
+                    key = 'mixer_send_%d' % send_idx
+                    if key in saved:
+                        try:
+                            old_val = send.value
+                            new_val = max(send.min, min(send.max, saved[key]))
+                            send.value = new_val
+                            self.log_message('LTC: Restoring Send %d: %.3f -> %.3f' % (send_idx, old_val, new_val))
+                            restored += 1
+                        except Exception as e:
+                            self.log_message('LTC: Error restoring Send %d: %s' % (send_idx, str(e)))
+        
+        # Restore ALL macros from ALL racks
+        if hasattr(track, 'devices'):
+            for dev_idx, device in enumerate(track.devices):
+                if hasattr(device, 'macros_mapped') and hasattr(device, 'parameters'):
+                    dev_name = device.name if hasattr(device, 'name') else 'Device%d' % dev_idx
                     
-                    # Check for mixer parameters (Volume, Pan, Sends, etc.)
-                    if entry.get('is_mixer_param') or (entry['lom_path'] and entry['lom_path'][0] == 'mixer_device'):
-                        mixer_param = self._get_mixer_parameter(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if mixer_param is not None:
-                            try:
-                                old_val = mixer_param.value
-                                new_val = max(mixer_param.min, min(mixer_param.max, saved[key]))
-                                mixer_param.value = new_val
-                                param_name_display = entry.get('param_live_name', 'Mixer Param')
-                                self.log_message('LTC: Restoring mixer param %s: %.3f -> %.3f' % (param_name_display, old_val, new_val))
-                                restored += 1
-                            except Exception as e:
-                                self.log_message('LTC: Error restoring mixer parameter: %s' % str(e))
-                        else:
-                            self.log_message('LTC: Could not resolve mixer parameter for restore')
-                        continue  # Skip to next entry
-                    
-                    # Check for ChainSelector special case
-                    if self._is_chain_selector_param(entry['lom_path']):
-                        chain_sel = self._get_chain_selector_property(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if chain_sel:
-                            try:
-                                old_val = chain_sel['get']()
-                                new_val = int(saved[key])
-                                chain_sel['set'](new_val)
-                                self.log_message('LTC: Restoring ChainSelector: %d -> %d' % (old_val, new_val))
-                                restored += 1
-                            except Exception as e:
-                                self.log_message('LTC: Error restoring ChainSelector: %s' % str(e))
-                        else:
-                            self.log_message('LTC: Could not resolve ChainSelector for restore')
-                    # Check for MacroControls special case
-                    elif self._is_macro_control_param(entry['lom_path']):
-                        macro_param = self._get_macro_control_parameter(all_tracks[entry['track_idx']], entry['lom_path'])
-                        if macro_param is not None:
-                            try:
-                                old_val = macro_param.value
-                                new_val = max(macro_param.min, min(macro_param.max, saved[key]))
-                                macro_param.value = new_val
-                                self.log_message('LTC: Restoring %s: %.3f -> %.3f' % (param_name, old_val, new_val))
-                                restored += 1
-                            except Exception as e:
-                                self.log_message('LTC: Error restoring MacroControl: %s' % str(e))
-                        else:
-                            self.log_message('LTC: Could not resolve MacroControl for restore')
-                    else:
-                        # Regular parameter - try device ID method first
-                        param = None
-                        if entry['param_index'] >= 0:
-                            param = self._find_parameter_by_device_id(
-                                all_tracks[entry['track_idx']],
-                                entry['device_class'],
-                                entry['device_name'],
-                                entry['device_path'],
-                                entry['param_index']
-                            )
-                        
-                        # Fallback: If param_index was -1 or device ID method failed, try LOM path navigation
-                        if param is None and entry['lom_path']:
-                            self.log_message('LTC: [RESTORE] Trying LOM path fallback for %s' % param_name)
-                            param = self._find_parameter_by_lom_path(
-                                all_tracks[entry['track_idx']],
-                                entry['lom_path']
-                            )
-                        
-                        if param is not None:
-                            try:
-                                old_val = param.value
-                                new_val = max(param.min, min(param.max, saved[key]))
-                                param.value = new_val
-                                self.log_message('LTC: Restoring %s: %.3f -> %.3f' % (param_name, old_val, new_val))
-                                restored += 1
-                            except Exception as e:
-                                self.log_message('LTC: Error restoring %s: %s' % (param_name, str(e)))
-                        else:
-                            self.log_message('LTC: Could not resolve for restore: %s' % param_name)
+                    # Restore all 8 macros
+                    for macro_idx in range(len(device.macros_mapped)):
+                        key = 'device_%d_macro_%d' % (dev_idx, macro_idx)
+                        if key in saved:
+                            param_idx = macro_idx + 1  # +1 to skip "Device On"
+                            if param_idx < len(device.parameters):
+                                param = device.parameters[param_idx]
+                                try:
+                                    old_val = param.value
+                                    new_val = max(param.min, min(param.max, saved[key]))
+                                    param.value = new_val
+                                    param_name = param.name if hasattr(param, 'name') else 'Macro%d' % macro_idx
+                                    self.log_message('LTC: Restoring %s [%s]: %.3f -> %.3f' % (dev_name, param_name, old_val, new_val))
+                                    restored += 1
+                                except Exception as e:
+                                    self.log_message('LTC: Error restoring %s macro %d: %s' % (dev_name, macro_idx, str(e)))
+        
         self.log_message('LTC: Restored %d params for track %d' % (restored, sel_idx))
 
     def _handle_save_and_rescan(self):
@@ -535,7 +522,7 @@ class Live_Track_Controller(ControlSurface):
             
             # Find and trigger the MIDI_Map_Scanner
             scanner_found = False
-            for cs in self.song().control_surfaces():
+            for cs in self.application().control_surfaces:
                 if cs.__class__.__name__ == 'MidiMapScanner':
                     self.log_message('LTC: Triggering MIDI_Map_Scanner...')
                     cs._scan_and_write()
@@ -672,11 +659,13 @@ class Live_Track_Controller(ControlSurface):
                         else:
                             return None
             
-            # For racks, macros are the first 8 parameters (indices 0-7)
-            if hasattr(obj, 'parameters') and macro_index < len(obj.parameters):
+            # For racks, parameters[0] is "Device On", macros start at index 1
+            # MacroControls.0 = parameters[1], MacroControls.3 = parameters[4], etc.
+            param_index = macro_index + 1  # Add 1 to skip "Device On" at index 0
+            if hasattr(obj, 'parameters') and param_index < len(obj.parameters):
                 # Verify it's actually a macro by checking if macros_mapped exists
                 if hasattr(obj, 'macros_mapped') and macro_index < len(obj.macros_mapped):
-                    return obj.parameters[macro_index]
+                    return obj.parameters[param_index]
                 else:
                     self.log_message('LTC: Device has no macros_mapped array')
                     return None

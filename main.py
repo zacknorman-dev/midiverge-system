@@ -39,6 +39,7 @@ class MIDIOverlay:
         self.current_track = "No Track"
         self.scanner_file = r"C:\Users\zackn\Documents\midi overlay\current_scan.json"
         self.cc_mappings = {}  # {cc: {'param_name': str, 'device_name': str}}
+        self.scanning_popup = None  # Popup window for scan progress
         
         # UI elements
         self.track_label = None
@@ -84,6 +85,14 @@ class MIDIOverlay:
             with open(self.scanner_file, 'r') as f:
                 data = json.load(f)
             
+            # Auto-detect track from first mapping if current_track is "No Track"
+            if self.current_track == "No Track" and data.get('mappings'):
+                first_track = data['mappings'][0].get('track_name_live', '')
+                if first_track:
+                    self.current_track = first_track
+                    self.track_label.config(text=first_track)
+                    print(f"Auto-detected track: {first_track}")
+            
             # Find mappings for current track and CC71-78
             for mapping in data.get('mappings', []):
                 cc = mapping.get('cc')
@@ -101,6 +110,12 @@ class MIDIOverlay:
             
             # Update UI labels
             self.update_labels()
+            
+            # Clear value displays for unmapped encoders
+            for i in range(8):
+                cc = 71 + i
+                if cc not in self.cc_mappings:
+                    self.update_value_display(i, "--", 0.0)
             
         except Exception as e:
             print(f"Error loading mappings: {e}")
@@ -259,7 +274,32 @@ class MIDIOverlay:
         """Handle messages from Ableton"""
         msg_type = message.get('type')
         
-        if msg_type == 'track_changed':
+        if msg_type == 'scan_start':
+            # Scanner started - show "Scanning..." popup
+            self.show_scanning_popup()
+            print("Scan started...")
+        
+        elif msg_type == 'scan_complete':
+            # Scanner finished - WIPE EVERYTHING and reload from scratch
+            self.hide_scanning_popup()
+            
+            # Clear ALL encoders first (nuclear option)
+            for i in range(8):
+                self.label_widgets[i].config(text=f"CC {71+i}")
+                self.update_value_display(i, "--", 0.0)
+            
+            # Now load fresh mappings from JSON
+            self.load_mappings()
+            
+            total = message.get('total_mappings', 0)
+            error = message.get('error')
+            
+            if error:
+                print(f"Scan complete with error: {error}")
+            else:
+                print(f"Scan complete: {total} total mappings")
+        
+        elif msg_type == 'track_changed':
             # Track selection changed - update current track and reload mappings
             track_name = message.get('track_name', 'Unknown Track')
             self.current_track = track_name
@@ -288,11 +328,66 @@ class MIDIOverlay:
             # Update display for this encoder
             self.update_value_display(slot_index, param_str, param_value)
     
+    def show_scanning_popup(self):
+        """Show 'Scanning...' popup in center of screen"""
+        if self.scanning_popup is not None:
+            return  # Already showing
+        
+        # Create popup window
+        popup = tk.Toplevel(self.root)
+        popup.title("")
+        popup.geometry("400x150")
+        popup.resizable(False, False)
+        popup.attributes('-topmost', True)
+        popup.configure(bg='#1a1a1a')
+        
+        # Remove window decorations
+        popup.overrideredirect(True)
+        
+        # Center on screen
+        screen_w = popup.winfo_screenwidth()
+        screen_h = popup.winfo_screenheight()
+        x = (screen_w - 400) // 2
+        y = (screen_h - 150) // 2
+        popup.geometry(f"400x150+{x}+{y}")
+        
+        # Content
+        frame = tk.Frame(popup, bg='#1a1a1a', highlightbackground='#00cc00', highlightthickness=3)
+        frame.pack(fill='both', expand=True, padx=0, pady=0)
+        
+        label = tk.Label(
+            frame,
+            text="Scanning MIDI Mappings...",
+            bg='#1a1a1a',
+            fg='#00cc00',
+            font=('Arial', 18, 'bold')
+        )
+        label.pack(expand=True)
+        
+        sublabel = tk.Label(
+            frame,
+            text="Please wait...",
+            bg='#1a1a1a',
+            fg='#888888',
+            font=('Arial', 12)
+        )
+        sublabel.pack()
+        
+        self.scanning_popup = popup
+    
+    def hide_scanning_popup(self):
+        """Hide scanning popup"""
+        if self.scanning_popup is not None:
+            self.scanning_popup.destroy()
+            self.scanning_popup = None
+    
     def cleanup(self):
         """Cleanup on exit"""
         self.running = False
         if self.udp_socket:
             self.udp_socket.close()
+        if self.scanning_popup:
+            self.scanning_popup.destroy()
 
 
 if __name__ == '__main__':

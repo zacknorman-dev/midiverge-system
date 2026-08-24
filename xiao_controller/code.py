@@ -13,8 +13,6 @@ import usb_midi
 import usb_hid
 import adafruit_midi
 from adafruit_midi.control_change import ControlChange
-from adafruit_hid.consumer_control import ConsumerControl
-from adafruit_hid.consumer_control_code import ConsumerControlCode
 import time
 
 # Onboard RGB LED
@@ -75,6 +73,8 @@ class Encoder:
         self.value = 64
         self.last_dir = 0
         self.last_time = 0
+        self.buffer_count = 0  # Accumulate transitions
+        self.last_send_time = 0  # When we last sent MIDI
 
 class Button:
     def __init__(self):
@@ -85,19 +85,25 @@ class Button:
 encoders = [Encoder() for _ in range(10)]
 buttons = [Button() for _ in range(10)]
 
-# Setup I2C
-i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
+# Auto-scan mode state
+auto_scan_mode = False
+
+# Setup I2C at 400kHz (fast mode) for faster encoder polling
+i2c = busio.I2C(board.SCL, board.SDA, frequency=400000)
 
 # Setup USB MIDI - single port
 midi = adafruit_midi.MIDI(midi_out=usb_midi.ports[1], out_channel=MIDI_CH-1)
 
 # Setup USB HID Consumer Control for Encoder 1 volume control
 try:
+    from adafruit_hid.consumer_control import ConsumerControl
+    from adafruit_hid.consumer_control_code import ConsumerControlCode
     consumer_control = ConsumerControl(usb_hid.devices)
     print("HID Consumer Control initialized")
 except Exception as e:
-    print(f"Failed to initialize HID: {e}")
+    print(f"Failed to initialize HID (audio dependencies may be missing): {e}")
     consumer_control = None
+    ConsumerControlCode = None
 
 # I2C helper functions
 def write_reg(addr, reg, val):
@@ -148,7 +154,47 @@ def process_encoder(enc, gpio, pin_a, pin_b, cc_num):
     enc.last_encoded = encoded
 
 def process_encoder_relative(enc, gpio, pin_a, pin_b, cc_num):
-    """Process encoder, sending exactly 1=CW or 127=CCW per detent. No acceleration."""
+    """Process encoder with buffering - accumulate transitions and send larger increments for fast turns."""
+    a = (gpio >> pin_a) & 1
+    b = (gpio >> pin_b) & 1
+    encoded = (b << 1) | a
+    sum_val = (enc.last_encoded << 2) | encoded
+
+    direction = 0
+    if sum_val in (0b0001, 0b0111, 0b1000, 0b1110):
+        direction = 1
+    elif sum_val in (0b0010, 0b0100, 0b1011, 0b1101):
+        direction = -1
+
+    now = time.monotonic()
+    
+    if direction != 0:
+        # Direction change - flush buffer if switching direction
+        if (enc.buffer_count > 0 and direction != enc.last_dir) or (now - enc.last_send_time > 0.015):
+            # Send accumulated value
+            if enc.buffer_count != 0:
+                value = 64 + (enc.buffer_count * 2) if enc.last_dir == 1 else 64 - (enc.buffer_count * 2)
+                value = max(1, min(127, value))  # Clamp to MIDI range
+                midi.send(ControlChange(cc_num, value))
+                enc.buffer_count = 0
+                enc.last_send_time = now
+        
+        # Accumulate this transition
+        enc.buffer_count += 1
+        enc.last_dir = direction
+    
+    # Also flush if buffer gets large or timeout
+    elif enc.buffer_count > 0 and (now - enc.last_send_time > 0.015):
+        value = 64 + (enc.buffer_count * 2) if enc.last_dir == 1 else 64 - (enc.buffer_count * 2)
+        value = max(1, min(127, value))
+        midi.send(ControlChange(cc_num, value))
+        enc.buffer_count = 0
+        enc.last_send_time = now
+
+    enc.last_encoded = encoded
+
+def process_encoder_relative_127(enc, gpio, pin_a, pin_b, cc_num):
+    """Process encoder for track selection, sending 1=CW or 127=CCW (for Live_Track_Controller)."""
     a = (gpio >> pin_a) & 1
     b = (gpio >> pin_b) & 1
     encoded = (b << 1) | a
@@ -197,9 +243,9 @@ def process_encoder_accel(enc, gpio, pin_a, pin_b, cc_num):
 
         # Acceleration based on time between detents
         if dt < 0.05:       # < 50ms  — very fast
-            accel = 6
+            accel = 4
         elif dt < 0.15:     # < 150ms — medium
-            accel = 3
+            accel = 2
         else:               # slow / first tick
             accel = 1
 
@@ -261,6 +307,24 @@ def process_button_mute(btn, gpio, pin):
                 consumer_control.send(ConsumerControlCode.MUTE)
                 print("MUTE Toggle")
 
+def auto_scan_midi_mappings():
+    """Send CC89 to trigger Ableton scanner (reads .als file, no oscillation needed)"""
+    print("Triggering MIDI map scan...")
+    
+    # Flash LED blue
+    rgb[0] = (0, 0, 255)
+    
+    # Send CC89 once - scanner reads .als file directly
+    midi.send(ControlChange(89, 127))
+    
+    # Brief LED feedback
+    time.sleep(0.1)
+    rgb[0] = (0, 255, 0)  # Green = done
+    time.sleep(0.1)
+    rgb[0] = (0, 0, 0)  # Off
+    
+    print("Scan triggered (check Ableton log)")
+
 # Setup interrupt pins
 print("Setting up interrupt pins...")
 int_u2 = digitalio.DigitalInOut(board.D6)   # U2 INT -> P0/D6/TX (pin 7)
@@ -304,6 +368,46 @@ print("USB MIDI + HID Controller Ready!")
 print("Encoder 1: HID Volume/Mute")  
 print("Encoders 2-10: MIDI CC71-79")
 print("Buttons 2-9: MIDI CC81-88 (virtual encoders, toggle 10<->117)")
+
+# ══════════════════════════════════════════════════════════════════════════════
+# MAIN LOOP
+# ══════════════════════════════════════════════════════════════════════════════
+
+while True:
+    # Read all GPIO states with interrupt detection
+    interrupt_detected = False
+    for chip_addr in [U2_ADDR, U3_ADDR, U4_ADDR, U5_ADDR]:
+        intcap = read_reg(chip_addr, MCP_INTCAP)  # Clears interrupt
+        if intcap != 0xFF:
+            interrupt_detected = True
+        gpio_states[chip_addr] = read_reg(chip_addr, MCP_GPIO)
+    
+    # Process encoders
+    for i in range(10):
+        gpio_addr, pin_a, pin_b, btn_gpio_addr, btn_pin, cc_num, cc_btn = ENCODERS[i]
+        
+        # Encoder processing
+        if i == 0:
+            process_encoder_volume(encoders[i], gpio_states[gpio_addr], pin_a, pin_b)
+        elif i == 9:
+            process_encoder_relative_127(encoders[i], gpio_states[gpio_addr], pin_a, pin_b, cc_num)
+        else:
+            process_encoder_relative(encoders[i], gpio_states[gpio_addr], pin_a, pin_b, cc_num)
+        
+        # Button processing
+        btn_state = (gpio_states[btn_gpio_addr] >> btn_pin) & 1
+        if btn_state != buttons[i].last_state and not btn_state:  # Button pressed (active low)
+            if cc_btn == CC_RESCAN:
+                # PERMANENTLY DISABLED - causes crash
+                print(f"CC{cc_btn} disabled (use Ableton restart for fresh scan)")
+            # Button 1 (index 0) is HID mute, others are MIDI
+            elif i == 0:
+                process_button_mute(buttons[i], btn_gpio_addr, btn_pin)
+            else:
+                process_button(buttons[i], btn_gpio_addr, btn_pin, cc_btn)
+            buttons[i].last_state = btn_state
+    
+    # No sleep - run loop as fast as possible to catch fast encoder turns
 print("Button 10: CC89 (rescan)")
 print("Interrupt-driven mode: U2(D6), U3(D2), U4(D0), U5(D1)")
 
@@ -327,29 +431,26 @@ while True:
         gpio = gpio_states[chip]
         
         # Encoder 1 (index 0) is HID volume control
-        # Encoder 10 (index 9) sends relative ticks for Ableton track selection
-        # Others are absolute MIDI CC
+        # Encoder 10 (index 9) sends 1/127 relative for Live_Track_Controller track selection
+        # Encoders 2-9 send 66/62 relative (Binary Offset) for Ableton MIDI mapping
         if i == 0:
             process_encoder_volume(encoders[i], gpio, pin_a, pin_b)
         elif i == 9:
-            process_encoder_relative(encoders[i], gpio, pin_a, pin_b, cc_enc)
+            process_encoder_relative_127(encoders[i], gpio, pin_a, pin_b, cc_enc)
         else:
-            process_encoder_accel(encoders[i], gpio, pin_a, pin_b, cc_enc)
+            process_encoder_relative(encoders[i], gpio, pin_a, pin_b, cc_enc)
         
         btn_gpio = gpio_states[btn_chip]
 
-        # Button 10 (index 9): rescan button with LED flash confirmation
+        # Button 10 (index 9): rescan button - triggers AUTO-SCAN
         if i == 9:
             state = bool((btn_gpio >> btn_pin) & 1)
             if state != buttons[i].last_state:
                 buttons[i].last_state = state
                 if not state:  # press only
-                    # Brief green flash for visual confirmation
-                    rgb[0] = (0, 255, 0)
-                    midi.send(ControlChange(cc_btn, 127))
-                    time.sleep(0.1)
-                    rgb[0] = (0, 0, 0)  # Back to off
-                    print(f"CC{cc_btn} Rescan")
+                    # Trigger auto-scan mode
+                    auto_scan_midi_mappings()
+                    print(f"CC{cc_btn} Auto-scan triggered")
         # Button 1 (index 0) is HID mute, others are MIDI
         elif i == 0:
             process_button_mute(buttons[i], btn_gpio, btn_pin)
