@@ -38,8 +38,14 @@ class MIDIOverlay:
         # State
         self.current_track = "No Track"
         self.scanner_file = r"C:\Users\zackn\Documents\midi overlay\current_scan.json"
+        self.manual_mappings_file = r"C:\Users\zackn\Documents\midi overlay\manual_mappings.json"
+        self.manual_mappings = {}  # {track_cc_key: {'mfl_path': str}}
         self.cc_mappings = {}  # {cc: {'param_name': str, 'device_name': str}}
         self.scanning_popup = None  # Popup window for scan progress
+        self.scanner_file_mtime = 0  # Track file modification time for auto-reload
+        
+        # Load manual mappings
+        self.load_manual_mappings()
         
         # UI elements
         self.track_label = None
@@ -47,17 +53,22 @@ class MIDIOverlay:
         self.value_labels = []   # Value text items
         self.progress_bars = []  # Progress bar rectangles
         
-        # Create UI
+        # Create UI FIRST so widgets exist when messages arrive
         self.create_ui()
+        print("UI created - widgets ready")
         
-        # Load initial mappings
+        # Load initial mappings from scanner JSON
         self.load_mappings()
         
-        # Start UDP listener for Ableton updates
+        # Start UDP listener AFTER UI is ready
         self.running = True
         self.udp_socket = None
         self.udp_thread = None
         self.start_udp_listener()
+        print("UDP listener started - ready to receive messages")
+        
+        # Start file watcher for auto-reload when scanner updates
+        self.check_file_changes()
         
         print("MIDI Overlay started - waiting for Ableton updates...")
     
@@ -71,6 +82,69 @@ class MIDIOverlay:
         y = screen_height - 102 - 40
         
         self.root.geometry(f"2560x102+{x}+{y}")
+    
+    def load_manual_mappings(self):
+        """Load manual mappings from JSON file"""
+        if not os.path.exists(self.manual_mappings_file):
+            self.manual_mappings = {}
+            return
+        
+        try:
+            with open(self.manual_mappings_file, 'r') as f:
+                self.manual_mappings = json.load(f)
+            print(f"Loaded {len(self.manual_mappings)} manual mappings")
+        except Exception as e:
+            print(f"Error loading manual mappings: {e}")
+            self.manual_mappings = {}
+    
+    def save_manual_mappings(self):
+        """Save manual mappings to JSON file"""
+        try:
+            with open(self.manual_mappings_file, 'w') as f:
+                json.dump(self.manual_mappings, f, indent=2)
+            print(f"Saved {len(self.manual_mappings)} manual mappings")
+        except Exception as e:
+            print(f"Error saving manual mappings: {e}")
+    
+    def trigger_rescan(self):
+        """Trigger scanner by creating do_scan.txt file"""
+        try:
+            trigger_file = r"C:\Users\zackn\Documents\midi overlay\do_scan.txt"
+            with open(trigger_file, 'w') as f:
+                f.write('scan')
+            print("Triggered rescan")
+            
+            # Visual feedback
+            if self.track_label:
+                old_track = self.track_label.cget('text')
+                self.track_label.config(text="⟳ Scanning...", fg='#ffaa00')
+                # Check for completion after 2 seconds
+                self.root.after(2000, lambda: self.check_scan_completion(old_track))
+        except Exception as e:
+            print(f"Error triggering rescan: {e}")
+            if self.track_label:
+                self.track_label.config(text="Scan Error!", fg='#ff0000')
+    
+    def check_scan_completion(self, old_track_text):
+        """Check if scan completed and show results"""
+        try:
+            with open(self.scanner_file, 'r') as f:
+                data = json.load(f)
+                total = len(data)
+                self.track_label.config(text=f"✓ Scan Complete - {total} mappings", fg='#00cc00')
+                self.root.after(3000, lambda: self.track_label.config(text=old_track_text, fg='#00ddff'))
+        except Exception as e:
+            self.track_label.config(text=f"Scan Error!", fg='#ff0000')
+            self.root.after(3000, lambda: self.track_label.config(text=old_track_text, fg='#00ddff'))
+    
+    def touch_scanner_json(self):
+        """Touch scanner JSON to trigger MIDIOverlay reload without full rescan"""
+        try:
+            # Update timestamp on scanner JSON file
+            os.utime(self.scanner_file, None)
+            print("Touched scanner JSON - MIDIOverlay will reload")
+        except Exception as e:
+            print(f"Error touching scanner JSON: {e}")
     
     def load_mappings(self):
         """Load CC71-78 mappings for current track from JSON"""
@@ -100,13 +174,17 @@ class MIDIOverlay:
                 
                 # Only load if CC is in our range (71-78)
                 if 71 <= cc <= 78 and track_name == self.current_track:
-                    param_name = mapping.get('param_live_name', 'Unknown')
+                    # Use param_tag since param_live_name is often empty (failed resolution)
+                    param_name = mapping.get('param_tag', mapping.get('param_live_name', ''))
                     device_name = mapping.get('device_name', '')
                     
-                    self.cc_mappings[cc] = {
-                        'param_name': param_name,
-                        'device_name': device_name
-                    }
+                    # Load scanner data as initial placeholder
+                    # parameter_changed messages will overwrite with correct Live names
+                    if param_name:
+                        self.cc_mappings[cc] = {
+                            'param_name': param_name,
+                            'device_name': device_name
+                        }
             
             # Update UI labels
             self.update_labels()
@@ -116,6 +194,9 @@ class MIDIOverlay:
                 cc = 71 + i
                 if cc not in self.cc_mappings:
                     self.update_value_display(i, "--", 0.0)
+            
+            # Update file modification time
+            self.scanner_file_mtime = os.path.getmtime(self.scanner_file)
             
         except Exception as e:
             print(f"Error loading mappings: {e}")
@@ -136,12 +217,40 @@ class MIDIOverlay:
                 else:
                     label_text = param_name
             else:
-                # No mapping - show CC number
-                label_text = f"CC {cc}"
+                # No mapping - show placeholder
+                label_text = "--"
             
             # Update label widget
             if slot_index < len(self.label_widgets):
                 self.label_widgets[slot_index].config(text=label_text)
+    
+    def check_file_changes(self):
+        """Periodically check if scanner file has been updated and auto-reload"""
+        try:
+            if os.path.exists(self.scanner_file):
+                current_mtime = os.path.getmtime(self.scanner_file)
+                if current_mtime != self.scanner_file_mtime:
+                    print(f"Scanner file updated - reloading and updating display...")
+                    self.scanner_file_mtime = current_mtime
+                    # Reload mappings and update labels immediately
+                    self.load_mappings()
+                    self.update_labels_from_mappings()
+        except Exception as e:
+            print(f"Error checking file changes: {e}")
+        
+        # Check again in 1 second
+        self.root.after(1000, self.check_file_changes)
+    
+    def update_labels_from_mappings(self):
+        """Update parameter name labels from loaded mappings"""
+        for i in range(8):
+            cc = 71 + i
+            if cc in self.cc_mappings:
+                param_name = self.cc_mappings[cc].get('param_name', f'CC {cc}')
+                self.label_widgets[i].config(text=param_name)
+            else:
+                self.label_widgets[i].config(text=f'CC {cc}')
+        print(f"Updated labels from mappings: {len(self.cc_mappings)} CCs loaded")
     
     def create_ui(self):
         """Create the visual overlay - 8 encoders with labels and progress bars"""
@@ -155,6 +264,20 @@ class MIDIOverlay:
         # Track name area (top 48px)
         track_frame = tk.Frame(self.root, bg='#1a1a1a')
         track_frame.place(x=0, y=0, width=2560, height=48)
+        
+        # Rescan button (centered, left of track name)
+        rescan_btn = tk.Button(
+            track_frame,
+            text="⟳ RESCAN",
+            bg='#00cc00',
+            fg='#000000',
+            font=('Arial', 14, 'bold'),
+            command=self.trigger_rescan,
+            relief='raised',
+            bd=2,
+            cursor='hand2'
+        )
+        rescan_btn.place(x=850, y=8, width=120, height=32)
         
         self.track_label = tk.Label(
             track_frame,
@@ -195,6 +318,11 @@ class MIDIOverlay:
             )
             label.place(x=5, y=0, width=190, height=41)
             self.label_widgets.append(label)
+            
+            # Double-click to open manual mapping dialog
+            cc = 71 + i
+            label.bind('<Double-Button-1>', lambda e, c=cc: self.open_manual_mapping_dialog(c))
+            gray_area.bind('<Double-Button-1>', lambda e, c=cc: self.open_manual_mapping_dialog(c))
             
             # RIGHT: Progress bar with value text
             bar_x = x + 200
@@ -241,6 +369,119 @@ class MIDIOverlay:
         canvas, bright_rect, bar_width = self.progress_bars[slot_index]
         filled_width = int(bar_width * normalized_value)
         canvas.coords(bright_rect, 0, 0, filled_width, 41)
+    
+    def open_manual_mapping_dialog(self, cc):
+        """Open dialog to manually set MFL path for this CC"""
+        # Get current mapping key
+        manual_key = f"track_{self.current_track.replace(' ', '_')}_cc_{cc}"
+        current_mfl_path = self.manual_mappings.get(manual_key, {}).get('mfl_path', '')
+        
+        # Create dialog
+        dialog = tk.Toplevel(self.root)
+        dialog.title(f"Manual Mapping - CC{cc}")
+        dialog.configure(bg='#1a1a1a')
+        dialog.attributes('-topmost', True)
+        dialog.resizable(False, False)
+        
+        # Fixed size container
+        main_frame = tk.Frame(dialog, bg='#1a1a1a', width=500, height=300)
+        main_frame.pack_propagate(False)
+        main_frame.pack()
+        
+        # Center on screen
+        dialog.update_idletasks()
+        x = (dialog.winfo_screenwidth() - 500) // 2
+        y = (dialog.winfo_screenheight() - 300) // 2
+        dialog.geometry(f"+{x}+{y}")
+        
+        # Header
+        header = tk.Label(
+            main_frame,
+            text=f"CC{cc} - {self.current_track}",
+            bg='#2a2a2a',
+            fg='#00cc00',
+            font=('Arial', 14, 'bold'),
+            pady=10
+        )
+        header.pack(fill='x')
+        
+        # Content
+        content = tk.Frame(main_frame, bg='#1a1a1a')
+        content.pack(fill='both', expand=True, padx=20, pady=20)
+        
+        # MFL Path field
+        tk.Label(
+            content,
+            text="Max for Live Path:",
+            bg='#1a1a1a',
+            fg='#888888',
+            font=('Arial', 10),
+            anchor='w'
+        ).pack(fill='x', pady=(0, 5))
+        
+        mfl_entry = tk.Entry(content, bg='#2a2a2a', fg='#ffffff', font=('Arial', 11))
+        mfl_entry.insert(0, current_mfl_path)
+        mfl_entry.pack(fill='x', pady=(0, 5))
+        
+        # Right-click paste
+        def paste_to_mfl(event):
+            try:
+                clipboard = dialog.clipboard_get()
+                mfl_entry.delete(0, tk.END)
+                mfl_entry.insert(0, clipboard)
+            except:
+                pass
+        mfl_entry.bind('<Button-3>', paste_to_mfl)
+        
+        tk.Label(
+            content,
+            text="(Right-click to paste)",
+            bg='#1a1a1a',
+            fg='#666666',
+            font=('Arial', 8),
+            anchor='w'
+        ).pack(fill='x', pady=(0, 20))
+        
+        # Buttons at bottom
+        button_frame = tk.Frame(main_frame, bg='#1a1a1a')
+        button_frame.pack(side='bottom', fill='x', padx=20, pady=20)
+        
+        def save_and_close():
+            mfl_path = mfl_entry.get().strip()
+            
+            # Save manual mapping
+            self.manual_mappings[manual_key] = {'mfl_path': mfl_path}
+            self.save_manual_mappings()
+            
+            # Touch scanner JSON to trigger MIDIOverlay reload
+            self.touch_scanner_json()
+            
+            dialog.destroy()
+            print(f"Saved manual mapping for CC{cc}: {mfl_path}")
+        
+        save_btn = tk.Button(
+            button_frame,
+            text="Save",
+            command=save_and_close,
+            bg='#00cc00',
+            fg='#000000',
+            font=('Arial', 11, 'bold'),
+            width=15,
+            cursor='hand2'
+        )
+        save_btn.pack(side='right', padx=5)
+        
+        cancel_btn = tk.Button(
+            button_frame,
+            text="Cancel",
+            command=dialog.destroy,
+            bg='#444444',
+            fg='#ffffff',
+            font=('Arial', 11),
+            width=15,
+            cursor='hand2'
+        )
+        cancel_btn.pack(side='right')
     
     def start_udp_listener(self):
         """Start UDP listener for Ableton messages"""
@@ -296,8 +537,16 @@ class MIDIOverlay:
             
             if error:
                 print(f"Scan complete with error: {error}")
+                # Show error in track label for 3 seconds
+                old_track = self.current_track
+                self.track_label.config(text=f"Scan Error!", fg='#ff0000')
+                self.root.after(3000, lambda: self.track_label.config(text=old_track, fg='#00cc00'))
             else:
                 print(f"Scan complete: {total} total mappings")
+                # Show success in track label for 3 seconds
+                old_track = self.current_track
+                self.track_label.config(text=f"✓ Scan Complete - {total} mappings", fg='#00cc00')
+                self.root.after(3000, lambda: self.track_label.config(text=old_track, fg='#00cc00'))
         
         elif msg_type == 'track_changed':
             # Track selection changed - update current track and reload mappings
@@ -305,12 +554,14 @@ class MIDIOverlay:
             self.current_track = track_name
             self.track_label.config(text=track_name)
             
-            # Reload mappings for new track
+            # CLEAR old mappings before loading new track's mappings
+            self.cc_mappings.clear()
+            
+            # Reload mappings for new track (scanner data as initial/fallback)
             self.load_mappings()
             
-            # Clear value displays
-            for i in range(8):
-                self.update_value_display(i, "--", 0.0)
+            # DON'T clear value displays - let parameter_changed messages update them
+            # (MIDIOverlay sends those immediately after track_changed)
             
             print(f"Track changed: {track_name}")
         
@@ -324,6 +575,22 @@ class MIDIOverlay:
             slot_index = cc - 71
             param_str = message.get('param_str', '--')
             param_value = message.get('param_value', 0.0)
+            param_name = message.get('param_name', '')
+            device_name = message.get('device_name', '')
+            
+            # Update stored mapping with actual parameter name from Ableton
+            if param_name:
+                self.cc_mappings[cc] = {
+                    'param_name': param_name,
+                    'device_name': device_name
+                }
+                # Update label immediately
+                if device_name:
+                    label_text = f"{device_name}\n{param_name}"
+                else:
+                    label_text = param_name
+                if slot_index < len(self.label_widgets):
+                    self.label_widgets[slot_index].config(text=label_text)
             
             # Update display for this encoder
             self.update_value_display(slot_index, param_str, param_value)

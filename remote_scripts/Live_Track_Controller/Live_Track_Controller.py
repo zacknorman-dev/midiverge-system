@@ -22,12 +22,10 @@ import socket
 
 import Live
 from _Framework.ControlSurface import ControlSurface
-from _Framework.Task import Task
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
 TRACK_SELECT_CC = 79          # CC reserved for track selection (encoder 10)
-SAVE_RESCAN_CC = 89           # CC reserved for manual save + rescan (button 10)
 
 
 class Live_Track_Controller(ControlSurface):
@@ -96,11 +94,12 @@ class Live_Track_Controller(ControlSurface):
     # ── MIDI map ──────────────────────────────────────────────────────────────
 
     def build_midi_map(self, midi_map_handle):
-        # Intercept CC79 (track selection) only
-        # CC89 (rescan) is handled by MIDI_Map_Scanner
+        # Intercept CC79 (track selection) and CC89 (rescan trigger)
+        self.log_message('LTC: build_midi_map called - forwarding CC79')
         Live.MidiMap.forward_midi_cc(
             self._c_instance.handle(), midi_map_handle, 0, TRACK_SELECT_CC)
-
+        self.log_message('LTC: CC79 forwarded successfully')
+        
         super().build_midi_map(midi_map_handle)
 
     # ── MIDI receive ──────────────────────────────────────────────────────────
@@ -111,9 +110,13 @@ class Live_Track_Controller(ControlSurface):
             return
 
         cc, value = midi_bytes[1], midi_bytes[2]
+        
+        # DEBUG: Log all CC messages
+        self.log_message(f'LTC: receive_midi CC{cc}={value}')
 
         if cc == TRACK_SELECT_CC:
             # CC79: Track selection (relative: 1=CW, 127=CCW)
+            self.log_message(f'LTC: Handling track selection CC79={value}')
             self._handle_track_selection(value)
         else:
             super().receive_midi(midi_bytes)
@@ -142,52 +145,6 @@ class Live_Track_Controller(ControlSurface):
         # Set new track
         self.song().view.selected_track = tracks[new_index]
         self.log_message('LTC: CC79 - Selected track %d: %s' % (new_index, tracks[new_index].name))
-    
-    def _handle_save_and_rescan(self):
-        """Handle CC89: Manual rescan - triggers Scanner and notifies overlay"""
-        self.log_message('LTC: CC89 - Manual rescan triggered')
-        
-        # Send scan_start to show popup
-        self._send_udp({
-            'type': 'scan_start',
-            'message': 'Scanning MIDI mappings...'
-        })
-        
-        # Find and trigger Scanner
-        scanner_found = False
-        for cs in self.application().control_surfaces:
-            if cs.__class__.__name__ == 'MidiMapScanner':
-                self.log_message('LTC: Triggering Scanner...')
-                cs._scan_and_write()
-                scanner_found = True
-                break
-        
-        if not scanner_found:
-            self.log_message('LTC: WARNING - Scanner not found!')
-            self._send_udp({
-                'type': 'scan_complete',
-                'error': 'Scanner not found',
-                'total_mappings': 0
-            })
-            return
-        
-        # Reload mappings from fresh JSON
-        self._cc_mappings = self._load_json_mappings()
-        self.log_message('LTC: Mappings reloaded from JSON')
-        
-        # Clear saved values (fresh start)
-        self._saved_values.clear()
-        self.log_message('LTC: Saved values cleared - will resave on next track switch')
-        
-        # Send scan_complete to trigger overlay wipe+reload
-        total_mappings = sum(len(entries) for entries in self._cc_mappings.values())
-        self._send_udp({
-            'type': 'scan_complete',
-            'total_mappings': total_mappings
-        })
-        
-        self.log_message('LTC: Scan complete - %d total mappings' % total_mappings)
-        self.log_message('LTC: Sent track_changed to overlay after reload')
     
     def _get_mixer_parameter(self, track, lom_path):
         """Get mixer parameter (Volume, Pan, Sends) from track"""

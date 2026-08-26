@@ -14,19 +14,43 @@ SCAN_TRIGGER_CC = 89  # Button 10 triggers scan
 class MidiMapScanner(ControlSurface):
     def __init__(self, c_instance):
         ControlSurface.__init__(self, c_instance)
-        self.log_message('MIDI Map Scanner loaded (auto-scan mode)')
+        self.log_message('MIDI Map Scanner loaded (file-trigger mode)')
         self._c_instance = c_instance
+        
+        # File-based trigger instead of MIDI
+        self.trigger_file = r"C:\Users\zackn\Documents\midi overlay\do_scan.txt"
         
         # Schedule scan after a short delay to let Ableton fully load
         self.schedule_message(3, self._scan_from_autosave)
+        
+        # Start watching for trigger file
+        self.schedule_message(10, self._check_trigger_file)
+    
+    def _check_trigger_file(self):
+        """Check if trigger file exists and run scan if found"""
+        try:
+            if os.path.exists(self.trigger_file):
+                self.log_message('[TRIGGER] Found trigger file - starting scan')
+                # Delete trigger file immediately
+                try:
+                    os.remove(self.trigger_file)
+                except:
+                    pass
+                # Run scan
+                self._scan_from_autosave()
+        except Exception as e:
+            self.log_message(f'[TRIGGER] Error checking trigger file: {e}')
+        
+        # Check again in 1 second
+        self.schedule_message(10, self._check_trigger_file)
     
     def disconnect(self):
         ControlSurface.disconnect(self)
     
     def build_midi_map(self, midi_map_handle):
-        """Don't register for MIDI - causes lockup"""
-        # Removed CC89 MIDI routing to prevent lockup on startup
-        pass
+        """Register CC89 for scan trigger"""
+        # Forward CC89 on channel 0 to receive_midi - same approach as Live_Track_Controller
+        Live.MidiMap.forward_midi_cc(self._c_instance.handle(), midi_map_handle, 0, SCAN_TRIGGER_CC)
     
     def receive_midi(self, midi_bytes):
         """CC89 triggers scan"""
@@ -136,11 +160,31 @@ class MidiMapScanner(ControlSurface):
                 param_elem = parent_map.get(km)
                 param_tag = param_elem.tag if param_elem is not None else '?'
                 
+                # Extract MIDI controller range (Min/Max)
+                midi_min = None
+                midi_max = None
+                if param_elem is not None:
+                    midi_range = param_elem.find('MidiControllerRange')
+                    if midi_range is not None:
+                        min_elem = midi_range.find('Min')
+                        max_elem = midi_range.find('Max')
+                        if min_elem is not None:
+                            try:
+                                midi_min = float(min_elem.get('Value', '0'))
+                            except:
+                                pass
+                        if max_elem is not None:
+                            try:
+                                midi_max = float(max_elem.get('Value', '1'))
+                            except:
+                                pass
+                
                 # Build LOM path
                 lom_path, is_mixer = self._extract_lom_path(track_elem, km, parent_map)
                 
                 # Resolve parameter at runtime
                 param_index = -1
+                device_index = -1
                 param_live_name = ''
                 device_class_name = ''
                 device_name = ''
@@ -154,8 +198,22 @@ class MidiMapScanner(ControlSurface):
                         if resolved:
                             device = resolved['device']
                             param = resolved['param']
+                            device_index = resolved.get('device_index', -1)
                             
-                            if hasattr(device, 'parameters'):
+                            # MixerDevice needs special param_index handling (no parameters list)
+                            if type(device).__name__ == 'MixerDevice':
+                                # Map mixer parameters to indices
+                                param_name = param.name if hasattr(param, 'name') else ''
+                                if param_name == 'Volume' or param_tag == 'Volume':
+                                    param_index = 0
+                                elif param_name == 'Panning' or param_tag == 'Panning':
+                                    param_index = 1
+                                elif 'Send' in param_name or 'Send' in param_tag:
+                                    # Extract send number - param could be like "Send A" or param_tag "Send 0"
+                                    param_index = 2  # Start at index 2 for sends
+                                else:
+                                    param_index = -1
+                            elif hasattr(device, 'parameters'):
                                 param_index = list(device.parameters).index(param)
                             else:
                                 param_index = -1
@@ -169,13 +227,34 @@ class MidiMapScanner(ControlSurface):
                             device_name = device.name if hasattr(device, 'name') else ''
                             resolution_status = 'success'
                         else:
-                            # Resolution failed - collect available parameters for manual matching
+                            # Resolution failed - try Live API fallback
                             resolution_error = 'Failed to resolve LOM path: %s' % ' > '.join(lom_path)
-                            available_parameters = self._get_available_parameters(live_tracks[track_idx], lom_path)
                             self.log_message('[FAILED] CC%d on track %d (%s): %s' % (cc, track_idx, live_name, resolution_error))
-                            self.log_message('[FAILED]   Available parameters (%d total):' % len(available_parameters))
-                            for p in available_parameters:
-                                self.log_message('[FAILED]     [%d] %s (original: %s)' % (p['index'], p['name'], p['original_name']))
+                            self.log_message('[FALLBACK] Querying Live API for CC%d mapping...' % cc)
+                            
+                            fallback_result = self._query_live_midi_mapping(cc, channel, track_idx)
+                            if fallback_result:
+                                # Success! Use the Live API result
+                                device = fallback_result['device']
+                                param = fallback_result['param']
+                                device_index = fallback_result['device_index']
+                                param_index = fallback_result['param_index']
+                                lom_path = fallback_result['lom_path']
+                                
+                                param_live_name = param.name
+                                device_class_name = device.class_name if hasattr(device, 'class_name') else ''
+                                device_name = device.name if hasattr(device, 'name') else ''
+                                resolution_status = 'success'
+                                resolution_error = ''
+                                self.log_message('[FALLBACK] SUCCESS! Found %s.%s at device[%d].parameters[%d]' % 
+                                    (device_name, param_live_name, device_index, param_index))
+                            else:
+                                # Fallback also failed - collect available parameters
+                                available_parameters = self._get_available_parameters(live_tracks[track_idx], lom_path)
+                                self.log_message('[FALLBACK] FAILED - could not find CC%d mapping in Live' % cc)
+                                self.log_message('[FAILED]   Available parameters (%d total):' % len(available_parameters))
+                                for p in available_parameters:
+                                    self.log_message('[FAILED]     [%d] %s (original: %s)' % (p['index'], p['name'], p['original_name']))
                 except Exception as e:
                     resolution_error = str(e)
                     self.log_message('[FAILED] CC%d on track %d (%s): %s' % (cc, track_idx, live_name, resolution_error))
@@ -189,12 +268,15 @@ class MidiMapScanner(ControlSurface):
                     'channel': channel,
                     'param_tag': param_tag,
                     'param_index': param_index,
+                    'device_index': device_index,
                     'param_live_name': param_live_name,
                     'device_class_name': device_class_name,
                     'device_name': device_name,
                     'device_path': [],
                     'is_mixer_param': is_mixer,
                     'lom_path': lom_path,
+                    'midi_min': midi_min,
+                    'midi_max': midi_max,
                     'resolution_status': resolution_status,
                     'resolution_error': resolution_error,
                     'available_parameters': available_parameters if available_parameters else [],
@@ -304,6 +386,7 @@ class MidiMapScanner(ControlSurface):
         
         obj = track
         device = None
+        device_index = -1
         
         for part in lom_path:
             if part.startswith('devices['):
@@ -313,6 +396,7 @@ class MidiMapScanner(ControlSurface):
                     if hasattr(obj, 'devices') and idx < len(obj.devices):
                         obj = obj.devices[idx]
                         device = obj
+                        device_index = idx  # Capture device index
                     else:
                         return None
             elif part.startswith('chains['):
@@ -321,17 +405,52 @@ class MidiMapScanner(ControlSurface):
                     idx = int(m.group(1))
                     if hasattr(obj, 'chains') and idx < len(obj.chains):
                         obj = obj.chains[idx]
+                        # Check if this is a chain mixer parameter access
+                        # If next part is a param, we need to navigate to mixer_device
+                        part_idx = lom_path.index(part)
+                        if part_idx + 1 < len(lom_path):
+                            next_part = lom_path[part_idx + 1]
+                            if next_part.startswith('param <'):
+                                # Chain mixer parameter - navigate to mixer_device
+                                if hasattr(obj, 'mixer_device'):
+                                    device = obj.mixer_device
+                                    device_index = -3  # Special marker for chain mixer_device
+                                else:
+                                    return None
                     else:
                         return None
             elif part == 'mixer_device':
                 if hasattr(obj, 'mixer_device'):
                     obj = obj.mixer_device
                     device = obj
+                    device_index = -2  # Special marker for mixer_device
                 else:
                     return None
             elif part.startswith('param <') or part.startswith('param_index['):
                 # Final parameter - find it in device.parameters
-                if not device or not hasattr(device, 'parameters'):
+                if not device:
+                    return None
+                
+                # MixerDevice is special - use named properties instead of parameters list
+                device_type = type(device).__name__
+                if device_type in ('MixerDevice', 'ChainMixerDevice'):
+                    param_tag = part[7:-1] if part.startswith('param <') else None
+                    if param_tag == 'Volume' and hasattr(device, 'volume'):
+                        return {'device': device, 'param': device.volume, 'device_index': device_index}
+                    elif param_tag == 'Panning' and hasattr(device, 'panning'):
+                        return {'device': device, 'param': device.panning, 'device_index': device_index}
+                    elif param_tag and param_tag.startswith('Send ') and hasattr(device, 'sends'):
+                        send_idx = int(param_tag.split(' ')[1])
+                        if send_idx < len(device.sends):
+                            return {'device': device, 'param': device.sends[send_idx], 'device_index': device_index}
+                    return None
+                
+                if not hasattr(device, 'parameters'):
+                    return None
+                
+                try:
+                    params_list = list(device.parameters)
+                except Exception:
                     return None
                 
                 # Try to match by tag name or use index
@@ -339,14 +458,25 @@ class MidiMapScanner(ControlSurface):
                     m = re.match(r'param_index\[(\d+)\]', part)
                     if m:
                         idx = int(m.group(1))
-                        if idx < len(device.parameters):
-                            return {'device': device, 'param': device.parameters[idx]}
+                        if idx < len(params_list):
+                            return {'device': device, 'param': params_list[idx], 'device_index': device_index}
                 else:
-                    # Search by parameter tag (less reliable)
-                    param_tag = part[7:-1]  # Extract from 'param <Tag>'
-                    for param in device.parameters:
-                        if param.original_name == param_tag or param.name == param_tag:
-                            return {'device': device, 'param': param}
+                    # Search by parameter tag (match original_name from XML)
+                    param_tag_search = part[7:-1]  # Extract from 'param <Tag>'
+                    
+                    # Transform MacroControls.N -> Macro N+1 (Live's original_name format)
+                    if param_tag_search.startswith('MacroControls.'):
+                        macro_num = int(param_tag_search.split('.')[1]) + 1
+                        param_tag_search = f'Macro {macro_num}'
+                    
+                    for param in params_list:
+                        try:
+                            original_name = param.original_name if hasattr(param, 'original_name') else param.name
+                            # Match exact original_name
+                            if original_name == param_tag_search:
+                                return {'device': device, 'param': param, 'device_index': device_index}
+                        except Exception:
+                            continue
                 
                 return None
         
@@ -384,23 +514,210 @@ class MidiMapScanner(ControlSurface):
                 if hasattr(obj, 'mixer_device'):
                     obj = obj.mixer_device
                     device = obj
+                    self.log_message('[DEBUG] Found mixer_device: %s' % type(device))
                 else:
+                    self.log_message('[DEBUG] Track has no mixer_device attribute')
                     return []
         
         # Now collect all parameters from the device
         available = []
-        if device and hasattr(device, 'parameters'):
-            for idx, param in enumerate(device.parameters):
+        self.log_message('[DEBUG] About to check device: %s, has device=%s' % (type(device) if device else 'None', device is not None))
+        if device:
+            # MixerDevice is special - doesn't expose parameters list, uses named properties
+            if type(device).__name__ == 'MixerDevice':
+                self.log_message('[DEBUG] MixerDevice detected - using named properties')
+                # Build parameters list from known mixer properties
                 try:
-                    available.append({
-                        'index': idx,
-                        'name': param.name,
-                        'original_name': param.original_name if hasattr(param, 'original_name') else param.name,
-                        'min': param.min if hasattr(param, 'min') else 0.0,
-                        'max': param.max if hasattr(param, 'max') else 1.0,
-                        'value': param.value if hasattr(param, 'value') else 0.0,
-                    })
-                except Exception:
-                    pass
+                    idx = 0
+                    if hasattr(device, 'volume'):
+                        available.append({'index': idx, 'name': 'Volume', 'original_name': 'Volume'})
+                        idx += 1
+                    if hasattr(device, 'panning'):
+                        available.append({'index': idx, 'name': 'Panning', 'original_name': 'Panning'})
+                        idx += 1
+                    if hasattr(device, 'sends'):
+                        for send_idx, send in enumerate(device.sends):
+                            available.append({'index': idx, 'name': 'Send %d' % send_idx, 'original_name': 'Send %d' % send_idx})
+                            idx += 1
+                    if hasattr(device, 'track_activator'):
+                        available.append({'index': idx, 'name': 'Track Activator', 'original_name': 'Track Activator'})
+                        idx += 1
+                    self.log_message('[DEBUG] MixerDevice built %d parameters' % len(available))
+                except Exception as e:
+                    self.log_message('[DEBUG] Failed to build MixerDevice parameters: %s' % str(e))
+                return available
+            
+            # Regular devices with parameters attribute
+            if not hasattr(device, 'parameters'):
+                self.log_message('[DEBUG] Device has no parameters attribute')
+                return []
+            try:
+                params_list = list(device.parameters)
+                self.log_message('[DEBUG] Device has %d parameters' % len(params_list))
+                for idx, param in enumerate(params_list):
+                    try:
+                        available.append({
+                            'index': idx,
+                            'name': param.name,
+                            'original_name': param.original_name if hasattr(param, 'original_name') else param.name,
+                            'min': param.min if hasattr(param, 'min') else 0.0,
+                            'max': param.max if hasattr(param, 'max') else 1.0,
+                            'value': param.value if hasattr(param, 'value') else 0.0,
+                        })
+                    except Exception as e:
+                        self.log_message('[DEBUG] Failed to read param %d: %s' % (idx, str(e)))
+            except Exception as e:
+                self.log_message('[DEBUG] Failed to list parameters: %s' % str(e))
         
         return available
+    
+    def _query_live_midi_mapping(self, cc, channel, track_idx):
+        """Query Live API to find which parameter is mapped to the given CC.
+        This is a fallback when XML-based resolution fails.
+        Returns dict with device, param, device_index, param_index, lom_path or None if not found.
+        """
+        try:
+            live_tracks = self.song().tracks
+            if track_idx >= len(live_tracks):
+                return None
+            
+            track = live_tracks[track_idx]
+            self.log_message('[QUERY] Searching track %d (%s) for CC%d mapping' % (track_idx, track.name, cc))
+            
+            # Check track mixer parameters first
+            if hasattr(track, 'mixer_device'):
+                mixer = track.mixer_device
+                # Check volume, panning, sends
+                for param_name in ['volume', 'panning']:
+                    if hasattr(mixer, param_name):
+                        param = getattr(mixer, param_name)
+                        if self._is_param_mapped_to_cc(param, cc, channel):
+                            self.log_message('[QUERY] Found mapping: track mixer.%s' % param_name)
+                            return {
+                                'device': mixer,
+                                'param': param,
+                                'device_index': -2,
+                                'param_index': 0 if param_name == 'volume' else 1,
+                                'lom_path': ['mixer_device', param_name]
+                            }
+                
+                # Check sends
+                if hasattr(mixer, 'sends'):
+                    for send_idx, send_param in enumerate(mixer.sends):
+                        if self._is_param_mapped_to_cc(send_param, cc, channel):
+                            self.log_message('[QUERY] Found mapping: track mixer.sends[%d]' % send_idx)
+                            return {
+                                'device': mixer,
+                                'param': send_param,
+                                'device_index': -2,
+                                'param_index': 2 + send_idx,
+                                'lom_path': ['mixer_device', 'sends[%d]' % send_idx]
+                            }
+            
+            # Check all devices on the track
+            if hasattr(track, 'devices'):
+                for device_idx, device in enumerate(track.devices):
+                    # Check device parameters
+                    if hasattr(device, 'parameters'):
+                        for param_idx, param in enumerate(device.parameters):
+                            if self._is_param_mapped_to_cc(param, cc, channel):
+                                self.log_message('[QUERY] Found mapping: device[%d].parameters[%d] = %s' % 
+                                    (device_idx, param_idx, param.name))
+                                
+                                # Build MFL path via canonical_parent
+                                lom_path = self._build_mfl_path(param)
+                                
+                                return {
+                                    'device': device,
+                                    'param': param,
+                                    'device_index': device_idx,
+                                    'param_index': param_idx,
+                                    'lom_path': lom_path
+                                }
+                    
+                    # Check chain mixer parameters if this is a rack device
+                    if hasattr(device, 'chains'):
+                        for chain_idx, chain in enumerate(device.chains):
+                            if hasattr(chain, 'mixer_device'):
+                                mixer = chain.mixer_device
+                                for param_name in ['volume', 'panning']:
+                                    if hasattr(mixer, param_name):
+                                        param = getattr(mixer, param_name)
+                                        if self._is_param_mapped_to_cc(param, cc, channel):
+                                            self.log_message('[QUERY] Found mapping: device[%d].chains[%d].mixer_device.%s' % 
+                                                (device_idx, chain_idx, param_name))
+                                            return {
+                                                'device': mixer,
+                                                'param': param,
+                                                'device_index': -3,
+                                                'param_index': -1,
+                                                'lom_path': ['devices[%d]' % device_idx, 'chains[%d]' % chain_idx, 'param <%s>' % param_name.capitalize()]
+                                            }
+            
+            return None
+            
+        except Exception as e:
+            self.log_message('[QUERY] Error querying Live MIDI mappings: %s' % str(e))
+            import traceback
+            self.log_message(traceback.format_exc())
+            return None
+    
+    def _is_param_mapped_to_cc(self, param, cc, channel):
+        """Check if a parameter is MIDI-mapped to the specified CC."""
+        try:
+            # Check if parameter has MIDI mapping
+            # Live API doesn't directly expose CC mappings, so we check value_has_listener
+            # and other indicators. This is a best-effort check.
+            # Actually, we can't reliably detect MIDI mappings through the API.
+            # The only way is to check if the parameter changes when we send the CC.
+            # For now, return False - this means we need a different approach.
+            # TODO: Find a way to detect MIDI mappings
+            return False
+        except:
+            return False
+    
+    def _build_mfl_path(self, param):
+        """Build MFL path by walking canonical_parent chain.
+        Returns list like ['devices[2]', 'parameters[3]']
+        """
+        path_parts = []
+        obj = param
+        depth = 0
+        
+        while hasattr(obj, 'canonical_parent') and depth < 20:
+            parent = obj.canonical_parent
+            
+            # Check if obj is in parameters list
+            if hasattr(parent, 'parameters'):
+                try:
+                    params_list = list(parent.parameters)
+                    if obj in params_list:
+                        idx = params_list.index(obj)
+                        path_parts.insert(0, 'parameters[%d]' % idx)
+                except:
+                    pass
+            
+            # Check if obj is in devices list
+            if hasattr(parent, 'devices'):
+                try:
+                    devices_list = list(parent.devices)
+                    if obj in devices_list:
+                        idx = devices_list.index(obj)
+                        path_parts.insert(0, 'devices[%d]' % idx)
+                except:
+                    pass
+            
+            # Check if obj is in tracks list
+            if hasattr(parent, 'tracks'):
+                try:
+                    tracks_list = list(parent.tracks)
+                    if obj in tracks_list:
+                        idx = tracks_list.index(obj)
+                        path_parts.insert(0, 'tracks[%d]' % idx)
+                except:
+                    pass
+            
+            obj = parent
+            depth += 1
+        
+        return path_parts
