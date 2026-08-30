@@ -130,7 +130,7 @@ class MIDIOverlay:
         try:
             with open(self.scanner_file, 'r') as f:
                 data = json.load(f)
-                total = len(data)
+                total = len(data.get('mappings', []))  # Count mappings array, not top-level keys
                 self.track_label.config(text=f"✓ Scan Complete - {total} mappings", fg='#00cc00')
                 self.root.after(3000, lambda: self.track_label.config(text=old_track_text, fg='#00ddff'))
         except Exception as e:
