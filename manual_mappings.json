@@ -107,5 +107,11 @@
   },
   "track_1-MIDI_cc_72": {
     "mfl_path": "live_set tracks 0 mixer_device volume"
+  },
+  "track_1-4_OSC_cc_71": {
+    "mfl_path": "live_set tracks 0 devices 0 parameters 6"
+  },
+  "track_7-Growl_Bass_cc_78": {
+    "mfl_path": "live_set tracks 6 mixer_device volume"
   }
 }

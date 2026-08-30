@@ -49,7 +49,6 @@ class MIDIverge(ControlSurface):
         self._scanner_mtime = 0
         self._startup_scan_done = False
         self._update_display_count = 0
-        self._was_dirty = False  # Track is_dirty state for save detection
         
         # ────────────────────────────────────────────────────────────────
         # State - UDP Sender
@@ -104,8 +103,8 @@ class MIDIverge(ControlSurface):
         # Setup track selection listener for automatic save/restore
         self.song.view.add_selected_track_listener(self._on_track_changed)
         
-        # Initialize is_dirty state for polling in update_display
-        self._was_dirty = self.song.is_dirty
+        # NOTE: is_dirty doesn't exist in Ableton API - scan-on-save disabled for now
+        # Use manual trigger file (do_scan.txt) instead
         
         # Initialize previous track index for track memory
         all_tracks = self._get_all_tracks()
@@ -221,17 +220,6 @@ class MIDIverge(ControlSurface):
             self._startup_scan_done = True
             self.log_message('[STARTUP] Running initial scan')
             self._scan_from_file()
-        
-        # Poll is_dirty to detect saves (is_dirty going from True to False)
-        try:
-            current_dirty = self.song.is_dirty
-            if self._was_dirty and not current_dirty:
-                self.file_log("[SAVE DETECTED] Project saved - triggering scan")
-                self.log_message('[SAVE] Project saved - running scan')
-                self._scan_from_file()
-            self._was_dirty = current_dirty
-        except Exception as e:
-            self.file_log(f"Error checking is_dirty: {e}")
         
         # Check for manual trigger file (do_scan.txt)
         if os.path.exists(self._trigger_file):
