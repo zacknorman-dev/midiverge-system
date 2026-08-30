@@ -3,10 +3,13 @@
 
 Write-Host "Starting MIDI Overlay..." -ForegroundColor Cyan
 
-# Launch the Python overlay
-$pythonPath = "python"
-$scriptPath = "c:\Users\zackn\Documents\midi overlay\main.py"
+# Navigate to the script directory
+Set-Location "C:\Users\zackn\Documents\midi overlay"
 
-Start-Process -FilePath $pythonPath -ArgumentList $scriptPath -NoNewWindow
+# Launch the Python overlay directly (shows errors if any)
+python main.py
 
-Write-Host "Overlay launched!" -ForegroundColor Green
+# If we get here, Python exited (either crashed or user closed)
+Write-Host ""
+Write-Host "Overlay closed." -ForegroundColor Yellow
+Read-Host "Press Enter to exit"
