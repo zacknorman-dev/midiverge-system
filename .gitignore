@@ -10,6 +10,11 @@ current_scan.json
 *.log
 overlay_received.log
 
+# Backups
+backups/
+*_BACKUP_*.py
+*.backup_*
+
 # Python virtual environment
 venv/
 env/
