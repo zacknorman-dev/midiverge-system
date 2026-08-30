@@ -15,6 +15,10 @@ backups/
 *_BACKUP_*.py
 *.backup_*
 
+# Archive (old development files)
+archive/
+!archive/README.md
+
 # Python virtual environment
 venv/
 env/
