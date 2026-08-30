@@ -1,12 +1,11 @@
-# Launch MIDIverge Overlay
-# Starts the unified MIDIverge overlay UI
+# ============================================
+# THIS FILE IS OBSOLETE - USE START.ps1
+# ============================================
 
-Write-Host "Starting MIDIverge Overlay..." -ForegroundColor Cyan
+Write-Host "This launcher is obsolete!" -ForegroundColor Red
+Write-Host "Use START.ps1 instead" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "Launching START.ps1 now..." -ForegroundColor Cyan
+Start-Sleep -Seconds 2
 
-# Launch the Python overlay
-$pythonPath = "python"
-$scriptPath = "c:\Users\zackn\Documents\midi overlay\midiverge_overlay.py"
-
-Start-Process -FilePath $pythonPath -ArgumentList $scriptPath -NoNewWindow
-
-Write-Host "MIDIverge Overlay launched!" -ForegroundColor Green
+& "$PSScriptRoot\START.ps1"

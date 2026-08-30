@@ -101,8 +101,6 @@
     "mfl_path": "live_set tracks 1 mixer_device volume"
   },
   "track_1-4_OSC_cc_72": {
-    "observed_min": 0.3984375,
-    "observed_max": 0.78125,
     "mfl_path": "live_set tracks 0 mixer_device volume"
   },
   "track_1-MIDI_cc_72": {
@@ -113,5 +111,8 @@
   },
   "track_7-Growl_Bass_cc_78": {
     "mfl_path": "live_set tracks 6 mixer_device volume"
+  },
+  "track_6-Balafon_Brushed_cc_78": {
+    "mfl_path": "live_set tracks 5 mixer_device volume"
   }
 }

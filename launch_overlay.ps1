@@ -1,15 +1,11 @@
-# Launch MIDI Overlay
-# Simple launcher without cache clearing
+# ============================================
+# THIS FILE IS OBSOLETE - USE START.ps1
+# ============================================
 
-Write-Host "Starting MIDI Overlay..." -ForegroundColor Cyan
-
-# Navigate to the script directory
-Set-Location "C:\Users\zackn\Documents\midi overlay"
-
-# Launch the Python overlay directly (shows errors if any)
-python main.py
-
-# If we get here, Python exited (either crashed or user closed)
+Write-Host "This launcher is obsolete!" -ForegroundColor Red
+Write-Host "Use START.ps1 instead" -ForegroundColor Yellow
 Write-Host ""
-Write-Host "Overlay closed." -ForegroundColor Yellow
-Read-Host "Press Enter to exit"
+Write-Host "Launching START.ps1 now..." -ForegroundColor Cyan
+Start-Sleep -Seconds 2
+
+& "$PSScriptRoot\START.ps1"

@@ -9,6 +9,7 @@ import json
 import os
 import socket
 import ctypes
+from datetime import datetime
 
 # Make application DPI-aware
 try:
@@ -19,9 +20,27 @@ except:
     except:
         pass
 
+# Logging setup
+LOG_FILE = r"C:\Users\zackn\Documents\midi overlay\overlay_debug.log"
+
+def log(message):
+    """Log to both console and file with timestamp"""
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+    log_line = f"[{timestamp}] {message}"
+    print(log_line)
+    try:
+        with open(LOG_FILE, 'a', encoding='utf-8') as f:
+            f.write(log_line + '\n')
+    except Exception as e:
+        print(f"ERROR writing to log: {e}")
+
 
 class MIDIOverlay:
     def __init__(self, root):
+        log("="*80)
+        log("MIDI OVERLAY STARTING")
+        log("="*80)
+        
         self.root = root
         self.root.title("Ableton MIDI Overlay")
         
@@ -55,7 +74,7 @@ class MIDIOverlay:
         
         # Create UI FIRST so widgets exist when messages arrive
         self.create_ui()
-        print("UI created - widgets ready")
+        log("UI created - widgets ready")
         
         # Load initial mappings from scanner JSON
         self.load_mappings()
@@ -65,12 +84,12 @@ class MIDIOverlay:
         self.udp_socket = None
         self.udp_thread = None
         self.start_udp_listener()
-        print("UDP listener started - ready to receive messages")
+        log("UDP listener started - ready to receive messages")
         
         # Start file watcher for auto-reload when scanner updates
         self.check_file_changes()
         
-        print("MIDI Overlay started - waiting for Ableton updates...")
+        log("MIDI Overlay started - waiting for Ableton updates...")
     
     def position_window_bottom(self):
         """Position window at bottom center of screen"""
@@ -92,9 +111,9 @@ class MIDIOverlay:
         try:
             with open(self.manual_mappings_file, 'r') as f:
                 self.manual_mappings = json.load(f)
-            print(f"Loaded {len(self.manual_mappings)} manual mappings")
+            log(f"Loaded {len(self.manual_mappings)} manual mappings")
         except Exception as e:
-            print(f"Error loading manual mappings: {e}")
+            log(f"Error loading manual mappings: {e}")
             self.manual_mappings = {}
     
     def save_manual_mappings(self):
@@ -133,6 +152,8 @@ class MIDIOverlay:
                 total = len(data.get('mappings', []))  # Count mappings array, not top-level keys
                 self.track_label.config(text=f"✓ Scan Complete - {total} mappings", fg='#00cc00')
                 self.root.after(3000, lambda: self.track_label.config(text=old_track_text, fg='#00ddff'))
+                # CRITICAL: Reload mappings to update the display
+                self.load_mappings()
         except Exception as e:
             self.track_label.config(text=f"Scan Error!", fg='#ff0000')
             self.root.after(3000, lambda: self.track_label.config(text=old_track_text, fg='#00ddff'))
@@ -199,7 +220,7 @@ class MIDIOverlay:
             self.scanner_file_mtime = os.path.getmtime(self.scanner_file)
             
         except Exception as e:
-            print(f"Error loading mappings: {e}")
+            log(f"Error loading mappings: {e}")
     
     def update_labels(self):
         """Update parameter name labels from current mappings"""
@@ -230,13 +251,13 @@ class MIDIOverlay:
             if os.path.exists(self.scanner_file):
                 current_mtime = os.path.getmtime(self.scanner_file)
                 if current_mtime != self.scanner_file_mtime:
-                    print(f"Scanner file updated - reloading and updating display...")
+                    log(f"Scanner file updated - reloading and updating display...")
                     self.scanner_file_mtime = current_mtime
                     # Reload mappings and update labels immediately
                     self.load_mappings()
                     self.update_labels_from_mappings()
         except Exception as e:
-            print(f"Error checking file changes: {e}")
+            log(f"Error checking file changes: {e}")
         
         # Check again in 1 second
         self.root.after(1000, self.check_file_changes)
@@ -250,7 +271,7 @@ class MIDIOverlay:
                 self.label_widgets[i].config(text=param_name)
             else:
                 self.label_widgets[i].config(text=f'CC {cc}')
-        print(f"Updated labels from mappings: {len(self.cc_mappings)} CCs loaded")
+        log(f"Updated labels from mappings: {len(self.cc_mappings)} CCs loaded")
     
     def create_ui(self):
         """Create the visual overlay - 8 encoders with labels and progress bars"""
@@ -493,12 +514,25 @@ class MIDIOverlay:
             self.udp_thread = threading.Thread(target=self.udp_listener_thread, daemon=True)
             self.udp_thread.start()
             
-            print("Listening on UDP port 9001 for Ableton updates")
+            log("Listening on UDP port 9001 for Ableton updates")
         except Exception as e:
-            print(f"Could not start UDP listener: {e}")
+            log(f"Could not start UDP listener: {e}")
+            if self.udp_socket:
+                try:
+                    self.udp_socket.close()
+                except:
+                    pass
+                self.udp_socket = None
+            # Exit immediately if we can't bind - another instance is running
+            log("ERROR: Another overlay instance is already running!")
+            log("Close it and try again.")
+            import sys
+            sys.exit(1)
     
     def udp_listener_thread(self):
         """Listen for UDP messages from Ableton"""
+        if not self.udp_socket:
+            return
         while self.running:
             try:
                 data, addr = self.udp_socket.recvfrom(65536)
@@ -508,7 +542,7 @@ class MIDIOverlay:
                 continue
             except Exception as e:
                 if self.running:
-                    print(f"UDP listener error: {e}")
+                    log(f"UDP listener error: {e}")
                 break
     
     def handle_message(self, message):
@@ -518,7 +552,7 @@ class MIDIOverlay:
         if msg_type == 'scan_start':
             # Scanner started - show "Scanning..." popup
             self.show_scanning_popup()
-            print("Scan started...")
+            log("Scan started...")
         
         elif msg_type == 'scan_complete':
             # Scanner finished - WIPE EVERYTHING and reload from scratch
@@ -536,13 +570,13 @@ class MIDIOverlay:
             error = message.get('error')
             
             if error:
-                print(f"Scan complete with error: {error}")
+                log(f"Scan complete with error: {error}")
                 # Show error in track label for 3 seconds
                 old_track = self.current_track
                 self.track_label.config(text=f"Scan Error!", fg='#ff0000')
                 self.root.after(3000, lambda: self.track_label.config(text=old_track, fg='#00cc00'))
             else:
-                print(f"Scan complete: {total} total mappings")
+                log(f"Scan complete: {total} total mappings")
                 # Show success in track label for 3 seconds
                 old_track = self.current_track
                 self.track_label.config(text=f"✓ Scan Complete - {total} mappings", fg='#00cc00')
@@ -563,9 +597,9 @@ class MIDIOverlay:
             # DON'T clear value displays - let parameter_changed messages update them
             # (MIDIOverlay sends those immediately after track_changed)
             
-            print(f"Track changed: {track_name}")
+            log(f"Track changed: {track_name}")
         
-        elif msg_type == 'parameter_changed':
+        elif msg_type in ('parameter_changed', 'cc_update'):
             # Parameter value changed - update display
             cc = message.get('cc')
             
@@ -579,6 +613,9 @@ class MIDIOverlay:
             param_max = message.get('param_max', 127.0)
             param_name = message.get('param_name', '')
             device_name = message.get('device_name', '')
+            
+            # Log parameter changes
+            log(f"CC{cc} changed: {device_name} {param_name} = {param_str} (raw:{param_value}, range:[{param_min}-{param_max}])")
             
             # Update stored mapping with actual parameter name from Ableton
             if param_name:
@@ -607,6 +644,20 @@ class MIDIOverlay:
             
             # Update display for this encoder
             self.update_value_display(slot_index, param_str, normalized_value)
+    
+    def update_value_display(self, slot_index, value_str, normalized_value):
+        """Update value text and progress bar for an encoder"""
+        if slot_index < 0 or slot_index >= 8:
+            return
+        
+        # Update value text
+        canvas, text_item = self.value_labels[slot_index]
+        canvas.itemconfig(text_item, text=value_str)
+        
+        # Update progress bar width (normalized_value is 0.0 to 1.0)
+        canvas, bright_rect, bar_width = self.progress_bars[slot_index]
+        filled_width = int(bar_width * normalized_value)
+        canvas.coords(bright_rect, 0, 0, filled_width, 41)
     
     def show_scanning_popup(self):
         """Show 'Scanning...' popup in center of screen"""

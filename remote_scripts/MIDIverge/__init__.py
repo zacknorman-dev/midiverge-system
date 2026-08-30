@@ -1285,6 +1285,7 @@ class MIDIverge(ControlSurface):
     def _send_udp_message(self, data):
         """Send UDP message to overlay"""
         if not self._sock:
+            self.file_log("UDP send failed: socket not initialized")
             return
         
         try:
@@ -1294,7 +1295,7 @@ class MIDIverge(ControlSurface):
             if data.get('type') not in ['cc_update', 'parameter_changed']:
                 self.file_log(f"UDP sent: {data.get('type')}")
         except Exception as e:
-            pass  # Silent fail in hot path
+            self.file_log(f"UDP send error: {e}")  # LOG THE ERROR!
     
     # ════════════════════════════════════════════════════════════════════════
     # HELPER METHODS
