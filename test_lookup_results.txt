@@ -1,0 +1,3068 @@
+[2026-08-24 18:38:55] ================================================================================
+[2026-08-24 18:38:55] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:38:55] ================================================================================
+[2026-08-24 18:38:55] Loaded scanner file with 12 mappings
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:38:55]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] ================================================================================
+[2026-08-24 18:38:55] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:38:55] ================================================================================
+[2026-08-24 18:38:55] 
+[2026-08-24 18:38:55] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:38:55]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:39:05] ================================================================================
+[2026-08-24 18:39:05] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:39:05] ================================================================================
+[2026-08-24 18:39:05] Loaded scanner file with 12 mappings
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:39:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] ================================================================================
+[2026-08-24 18:39:05] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:39:05] ================================================================================
+[2026-08-24 18:39:05] 
+[2026-08-24 18:39:05] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:39:05]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:39:22] ================================================================================
+[2026-08-24 18:39:22] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:39:22] ================================================================================
+[2026-08-24 18:39:22] Loaded scanner file with 12 mappings
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:39:22]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] ================================================================================
+[2026-08-24 18:39:22] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:39:22] ================================================================================
+[2026-08-24 18:39:22] 
+[2026-08-24 18:39:22] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:39:22]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:40:23] ================================================================================
+[2026-08-24 18:40:23] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:40:23] ================================================================================
+[2026-08-24 18:40:23] Loaded scanner file with 12 mappings
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:40:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] ================================================================================
+[2026-08-24 18:40:23] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:40:23] ================================================================================
+[2026-08-24 18:40:23] 
+[2026-08-24 18:40:23] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:40:23]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:41:48] ================================================================================
+[2026-08-24 18:41:48] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:41:48] ================================================================================
+[2026-08-24 18:41:48] Loaded scanner file with 12 mappings
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:41:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] ================================================================================
+[2026-08-24 18:41:48] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:41:48] ================================================================================
+[2026-08-24 18:41:48] 
+[2026-08-24 18:41:48] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:41:48]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:44:46] ================================================================================
+[2026-08-24 18:44:46] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:44:46] ================================================================================
+[2026-08-24 18:44:46] Loaded scanner file with 12 mappings
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:44:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] ================================================================================
+[2026-08-24 18:44:46] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:44:46] ================================================================================
+[2026-08-24 18:44:46] 
+[2026-08-24 18:44:46] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:44:46]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:46:28] ================================================================================
+[2026-08-24 18:46:28] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:46:28] ================================================================================
+[2026-08-24 18:46:28] Loaded scanner file with 12 mappings
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:46:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] ================================================================================
+[2026-08-24 18:46:28] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:46:28] ================================================================================
+[2026-08-24 18:46:28] 
+[2026-08-24 18:46:28] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:46:28]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:49:46] ================================================================================
+[2026-08-24 18:49:46] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:49:46] ================================================================================
+[2026-08-24 18:49:46] Loaded scanner file with 12 mappings
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:49:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] ================================================================================
+[2026-08-24 18:49:46] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:49:46] ================================================================================
+[2026-08-24 18:49:46] 
+[2026-08-24 18:49:46] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:49:46]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:55:11] ================================================================================
+[2026-08-24 18:55:11] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:55:11] ================================================================================
+[2026-08-24 18:55:11] Loaded scanner file with 12 mappings
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:55:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] ================================================================================
+[2026-08-24 18:55:11] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:55:11] ================================================================================
+[2026-08-24 18:55:11] 
+[2026-08-24 18:55:11] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:55:11]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 18:59:46] ================================================================================
+[2026-08-24 18:59:46] INDEX-BASED LOOKUP TEST
+[2026-08-24 18:59:46] ================================================================================
+[2026-08-24 18:59:46] Loaded scanner file with 12 mappings
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 18:59:46]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] ================================================================================
+[2026-08-24 18:59:46] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 18:59:46] ================================================================================
+[2026-08-24 18:59:46] 
+[2026-08-24 18:59:46] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 18:59:46]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 19:00:00] ================================================================================
+[2026-08-24 19:00:00] INDEX-BASED LOOKUP TEST
+[2026-08-24 19:00:00] ================================================================================
+[2026-08-24 19:00:00] Loaded scanner file with 12 mappings
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:00:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] ================================================================================
+[2026-08-24 19:00:00] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 19:00:00] ================================================================================
+[2026-08-24 19:00:00] 
+[2026-08-24 19:00:00] ⚠️  ALL MAPPINGS MISSING device_index - Scanner needs to be reloaded!
+[2026-08-24 19:00:00]    Toggle MIDI_Map_Scanner off/on in Ableton preferences to regenerate scan data
+[2026-08-24 19:02:04] ================================================================================
+[2026-08-24 19:02:04] INDEX-BASED LOOKUP TEST
+[2026-08-24 19:02:04] ================================================================================
+[2026-08-24 19:02:04] Loaded scanner file with 12 mappings
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:02:04]   → Trying device[0].parameters[3]...
+[2026-08-24 19:02:04]   ✓ SUCCESS - Found 'Chorus' in device '4 OSC'
+[2026-08-24 19:02:04]     Current value: 37.0
+[2026-08-24 19:02:04]     Scanner expected: 'MacroControls.3'
+[2026-08-24 19:02:04]     ⚠️  WARNING: Name mismatch! (Live='Chorus' vs Scanner='MacroControls.3')
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:02:04]   → Trying device[0].parameters[3]...
+[2026-08-24 19:02:04]   ✓ SUCCESS - Found 'Filter Velo' in device '3 OP Boom'
+[2026-08-24 19:02:04]     Current value: 71.0
+[2026-08-24 19:02:04]     Scanner expected: 'MacroControls.3'
+[2026-08-24 19:02:04]     ⚠️  WARNING: Name mismatch! (Live='Filter Velo' vs Scanner='MacroControls.3')
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:02:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:02:04] 
+[2026-08-24 19:02:04] ================================================================================
+[2026-08-24 19:02:04] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 19:02:04] ================================================================================
+[2026-08-24 19:05:43] ================================================================================
+[2026-08-24 19:05:43] INDEX-BASED LOOKUP TEST
+[2026-08-24 19:05:43] ================================================================================
+[2026-08-24 19:05:43] Loaded scanner file with 12 mappings
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:05:43]   → Trying device[0].parameters[3]...
+[2026-08-24 19:05:43]   ✓ SUCCESS - Found 'Chorus' in device '4 OSC'
+[2026-08-24 19:05:43]     Current value: 37.0
+[2026-08-24 19:05:43]     Scanner expected: 'MacroControls.3'
+[2026-08-24 19:05:43]     ⚠️  WARNING: Name mismatch! (Live='Chorus' vs Scanner='MacroControls.3')
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 19:05:43]   → Trying device[0].parameters[3]...
+[2026-08-24 19:05:43]   ✓ SUCCESS - Found 'Filter Velo' in device '3 OP Boom'
+[2026-08-24 19:05:43]     Current value: 71.0
+[2026-08-24 19:05:43]     Scanner expected: 'MacroControls.3'
+[2026-08-24 19:05:43]     ⚠️  WARNING: Name mismatch! (Live='Filter Velo' vs Scanner='MacroControls.3')
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 19:05:43]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 19:05:43] 
+[2026-08-24 19:05:43] ================================================================================
+[2026-08-24 19:05:43] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 19:05:43] ================================================================================
+[2026-08-24 20:19:16] ================================================================================
+[2026-08-24 20:19:16] INDEX-BASED LOOKUP TEST
+[2026-08-24 20:19:16] ================================================================================
+[2026-08-24 20:19:16] Loaded scanner file with 12 mappings
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 20:19:16]   → Trying device[0].parameters[3]...
+[2026-08-24 20:19:16]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 20:19:16]   → Trying device[0].parameters[3]...
+[2026-08-24 20:19:16]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 20:19:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:16] 
+[2026-08-24 20:19:16] ================================================================================
+[2026-08-24 20:19:16] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 20:19:16] ================================================================================
+[2026-08-24 20:19:26] ================================================================================
+[2026-08-24 20:19:26] INDEX-BASED LOOKUP TEST
+[2026-08-24 20:19:26] ================================================================================
+[2026-08-24 20:19:26] Loaded scanner file with 12 mappings
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 20:19:26]   → Trying device[0].parameters[3]...
+[2026-08-24 20:19:26]   ✓ SUCCESS - Found 'Chorus' in device '4 OSC'
+[2026-08-24 20:19:26]     Current value: 0.0
+[2026-08-24 20:19:26]     Scanner expected: 'MacroControls.3'
+[2026-08-24 20:19:26]     ⚠️  WARNING: Name mismatch! (Live='Chorus' vs Scanner='MacroControls.3')
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 20:19:26]   → Trying device[0].parameters[3]...
+[2026-08-24 20:19:26]   ✓ SUCCESS - Found 'Filter Velo' in device '3 OP Boom'
+[2026-08-24 20:19:26]     Current value: 0.0
+[2026-08-24 20:19:26]     Scanner expected: 'MacroControls.3'
+[2026-08-24 20:19:26]     ⚠️  WARNING: Name mismatch! (Live='Filter Velo' vs Scanner='MacroControls.3')
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 20:19:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 20:19:26] 
+[2026-08-24 20:19:26] ================================================================================
+[2026-08-24 20:19:26] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 20:19:26] ================================================================================
+[2026-08-24 21:24:01] ================================================================================
+[2026-08-24 21:24:01] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:24:01] ================================================================================
+[2026-08-24 21:24:01] Loaded scanner file with 13 mappings
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:24:01]   → Trying device[0].parameters[4]...
+[2026-08-24 21:24:01]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:24:01]   → Trying device[0].parameters[4]...
+[2026-08-24 21:24:01]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:24:01]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:24:01]   ❌ FAIL - Invalid track_index 4
+[2026-08-24 21:24:01] 
+[2026-08-24 21:24:01] ================================================================================
+[2026-08-24 21:24:01] TEST COMPLETE: 0 SUCCESS, 13 FAIL
+[2026-08-24 21:24:01] ================================================================================
+[2026-08-24 21:24:16] ================================================================================
+[2026-08-24 21:24:16] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:24:16] ================================================================================
+[2026-08-24 21:24:16] Loaded scanner file with 13 mappings
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:24:16]   → Trying device[0].parameters[4]...
+[2026-08-24 21:24:16]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 21:24:16]     Current value: 0.0
+[2026-08-24 21:24:16]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:24:16]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:24:16]   → Trying device[0].parameters[4]...
+[2026-08-24 21:24:16]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 21:24:16]     Current value: 0.0
+[2026-08-24 21:24:16]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:24:16]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:24:16]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:24:16]   → Trying device[0].parameters[4]...
+[2026-08-24 21:24:16]   ✓ SUCCESS - Found 'Volume' in device 'Harsh FM Bass'
+[2026-08-24 21:24:16]     Current value: 0.5499998927116394
+[2026-08-24 21:24:16]     Scanner expected: 'Volume'
+[2026-08-24 21:24:16] 
+[2026-08-24 21:24:16] ================================================================================
+[2026-08-24 21:24:16] TEST COMPLETE: 3 SUCCESS, 10 FAIL
+[2026-08-24 21:24:16] ================================================================================
+[2026-08-24 21:26:26] ================================================================================
+[2026-08-24 21:26:26] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:26:26] ================================================================================
+[2026-08-24 21:26:26] Loaded scanner file with 13 mappings
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:26:26]   → Trying device[0].parameters[4]...
+[2026-08-24 21:26:26]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:26:26]   → Trying device[0].parameters[4]...
+[2026-08-24 21:26:26]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:26:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:26:26]   ❌ FAIL - Invalid track_index 4
+[2026-08-24 21:26:26] 
+[2026-08-24 21:26:26] ================================================================================
+[2026-08-24 21:26:26] TEST COMPLETE: 0 SUCCESS, 13 FAIL
+[2026-08-24 21:26:26] ================================================================================
+[2026-08-24 21:26:41] ================================================================================
+[2026-08-24 21:26:41] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:26:41] ================================================================================
+[2026-08-24 21:26:41] Loaded scanner file with 13 mappings
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:26:41]   → Trying device[0].parameters[4]...
+[2026-08-24 21:26:41]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 21:26:41]     Current value: 0.0
+[2026-08-24 21:26:41]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:26:41]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:26:41]   → Trying device[0].parameters[4]...
+[2026-08-24 21:26:41]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 21:26:41]     Current value: 0.0
+[2026-08-24 21:26:41]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:26:41]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:26:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:26:41]   → Trying device[0].parameters[4]...
+[2026-08-24 21:26:41]   ✓ SUCCESS - Found 'Volume' in device 'Harsh FM Bass'
+[2026-08-24 21:26:41]     Current value: 0.5499998927116394
+[2026-08-24 21:26:41]     Scanner expected: 'Volume'
+[2026-08-24 21:26:41] 
+[2026-08-24 21:26:41] ================================================================================
+[2026-08-24 21:26:41] TEST COMPLETE: 3 SUCCESS, 10 FAIL
+[2026-08-24 21:26:41] ================================================================================
+[2026-08-24 21:34:07] ================================================================================
+[2026-08-24 21:34:07] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:34:07] ================================================================================
+[2026-08-24 21:34:07] Loaded scanner file with 13 mappings
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:34:07]   → Trying device[0].parameters[4]...
+[2026-08-24 21:34:07]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:34:07]   → Trying device[0].parameters[4]...
+[2026-08-24 21:34:07]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:34:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:34:07]   ❌ FAIL - Invalid track_index 4
+[2026-08-24 21:34:07] 
+[2026-08-24 21:34:07] ================================================================================
+[2026-08-24 21:34:07] TEST COMPLETE: 0 SUCCESS, 13 FAIL
+[2026-08-24 21:34:07] ================================================================================
+[2026-08-24 21:34:19] ================================================================================
+[2026-08-24 21:34:19] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:34:19] ================================================================================
+[2026-08-24 21:34:19] Loaded scanner file with 13 mappings
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:34:19]   → Trying device[0].parameters[4]...
+[2026-08-24 21:34:19]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 21:34:19]     Current value: 0.0
+[2026-08-24 21:34:19]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:34:19]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:34:19]   → Trying device[0].parameters[4]...
+[2026-08-24 21:34:19]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 21:34:19]     Current value: 0.0
+[2026-08-24 21:34:19]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:34:19]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:34:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:34:19]   → Trying device[0].parameters[4]...
+[2026-08-24 21:34:19]   ✓ SUCCESS - Found 'Volume' in device 'Harsh FM Bass'
+[2026-08-24 21:34:19]     Current value: 0.5499998927116394
+[2026-08-24 21:34:19]     Scanner expected: 'Volume'
+[2026-08-24 21:34:19] 
+[2026-08-24 21:34:19] ================================================================================
+[2026-08-24 21:34:19] TEST COMPLETE: 3 SUCCESS, 10 FAIL
+[2026-08-24 21:34:19] ================================================================================
+[2026-08-24 21:36:50] ================================================================================
+[2026-08-24 21:36:50] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:36:50] ================================================================================
+[2026-08-24 21:36:50] Loaded scanner file with 13 mappings
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:36:50]   → Trying device[0].parameters[4]...
+[2026-08-24 21:36:50]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:36:50]   → Trying device[0].parameters[4]...
+[2026-08-24 21:36:50]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:36:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:36:50]   ❌ FAIL - Invalid track_index 4
+[2026-08-24 21:36:50] 
+[2026-08-24 21:36:50] ================================================================================
+[2026-08-24 21:36:50] TEST COMPLETE: 0 SUCCESS, 13 FAIL
+[2026-08-24 21:36:50] ================================================================================
+[2026-08-24 21:36:58] ================================================================================
+[2026-08-24 21:36:58] INDEX-BASED LOOKUP TEST
+[2026-08-24 21:36:58] ================================================================================
+[2026-08-24 21:36:58] Loaded scanner file with 13 mappings
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:36:58]   → Trying device[0].parameters[4]...
+[2026-08-24 21:36:58]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 21:36:58]     Current value: 0.0
+[2026-08-24 21:36:58]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:36:58]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 21:36:58]   → Trying device[0].parameters[4]...
+[2026-08-24 21:36:58]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 21:36:58]     Current value: 0.0
+[2026-08-24 21:36:58]     Scanner expected: 'MacroControls.3'
+[2026-08-24 21:36:58]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 21:36:58]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 21:36:58]   → Trying device[0].parameters[4]...
+[2026-08-24 21:36:58]   ✓ SUCCESS - Found 'Volume' in device 'Harsh FM Bass'
+[2026-08-24 21:36:58]     Current value: 0.5499998927116394
+[2026-08-24 21:36:58]     Scanner expected: 'Volume'
+[2026-08-24 21:36:58] 
+[2026-08-24 21:36:58] ================================================================================
+[2026-08-24 21:36:58] TEST COMPLETE: 3 SUCCESS, 10 FAIL
+[2026-08-24 21:36:58] ================================================================================
+[2026-08-24 22:14:05] ================================================================================
+[2026-08-24 22:14:05] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:14:05] ================================================================================
+[2026-08-24 22:14:05] Loaded scanner file with 13 mappings
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:14:05]   → Trying device[0].parameters[4]...
+[2026-08-24 22:14:05]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 22:14:05]     Current value: 0.0
+[2026-08-24 22:14:05]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:14:05]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:14:05]   → Trying device[0].parameters[4]...
+[2026-08-24 22:14:05]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 22:14:05]     Current value: 0.0
+[2026-08-24 22:14:05]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:14:05]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:14:05]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] Track 4 (5-Harsh FM Bass), CC72: param_tag='Volume'
+[2026-08-24 22:14:05]   → Trying device[0].parameters[4]...
+[2026-08-24 22:14:05]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:14:05] 
+[2026-08-24 22:14:05] ================================================================================
+[2026-08-24 22:14:05] TEST COMPLETE: 2 SUCCESS, 11 FAIL
+[2026-08-24 22:14:05] ================================================================================
+[2026-08-24 22:25:47] ================================================================================
+[2026-08-24 22:25:47] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:25:47] ================================================================================
+[2026-08-24 22:25:47] Loaded scanner file with 12 mappings
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:25:47]   → Trying device[0].parameters[4]...
+[2026-08-24 22:25:47]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:25:47]   → Trying device[0].parameters[4]...
+[2026-08-24 22:25:47]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:25:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:25:47] 
+[2026-08-24 22:25:47] ================================================================================
+[2026-08-24 22:25:47] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 22:25:47] ================================================================================
+[2026-08-24 22:26:07] ================================================================================
+[2026-08-24 22:26:07] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:26:07] ================================================================================
+[2026-08-24 22:26:07] Loaded scanner file with 12 mappings
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:26:07]   → Trying device[0].parameters[4]...
+[2026-08-24 22:26:07]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 22:26:07]     Current value: 0.0
+[2026-08-24 22:26:07]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:26:07]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:26:07]   → Trying device[0].parameters[4]...
+[2026-08-24 22:26:07]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 22:26:07]     Current value: 0.0
+[2026-08-24 22:26:07]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:26:07]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:26:07]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:26:07] 
+[2026-08-24 22:26:07] ================================================================================
+[2026-08-24 22:26:07] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 22:26:07] ================================================================================
+[2026-08-24 22:28:41] ================================================================================
+[2026-08-24 22:28:41] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:28:41] ================================================================================
+[2026-08-24 22:28:41] Loaded scanner file with 12 mappings
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:28:41]   → Trying device[0].parameters[4]...
+[2026-08-24 22:28:41]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:28:41]   → Trying device[0].parameters[4]...
+[2026-08-24 22:28:41]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:28:41]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:28:41] 
+[2026-08-24 22:28:41] ================================================================================
+[2026-08-24 22:28:41] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 22:28:41] ================================================================================
+[2026-08-24 22:29:04] ================================================================================
+[2026-08-24 22:29:04] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:29:04] ================================================================================
+[2026-08-24 22:29:04] Loaded scanner file with 12 mappings
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:29:04]   → Trying device[0].parameters[4]...
+[2026-08-24 22:29:04]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:29:04]   → Trying device[0].parameters[4]...
+[2026-08-24 22:29:04]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:29:04]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:04] 
+[2026-08-24 22:29:04] ================================================================================
+[2026-08-24 22:29:04] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 22:29:04] ================================================================================
+[2026-08-24 22:29:13] ================================================================================
+[2026-08-24 22:29:13] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:29:13] ================================================================================
+[2026-08-24 22:29:13] Loaded scanner file with 12 mappings
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:29:13]   → Trying device[0].parameters[4]...
+[2026-08-24 22:29:13]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 22:29:13]     Current value: 0.0
+[2026-08-24 22:29:13]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:29:13]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:29:13]   → Trying device[0].parameters[4]...
+[2026-08-24 22:29:13]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 22:29:13]     Current value: 0.0
+[2026-08-24 22:29:13]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:29:13]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:29:13]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:29:13] 
+[2026-08-24 22:29:13] ================================================================================
+[2026-08-24 22:29:13] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 22:29:13] ================================================================================
+[2026-08-24 22:34:33] ================================================================================
+[2026-08-24 22:34:33] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:34:33] ================================================================================
+[2026-08-24 22:34:33] Loaded scanner file with 12 mappings
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:34:33]   → Trying device[0].parameters[4]...
+[2026-08-24 22:34:33]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:34:33]   → Trying device[0].parameters[4]...
+[2026-08-24 22:34:33]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:34:33]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:33] 
+[2026-08-24 22:34:33] ================================================================================
+[2026-08-24 22:34:33] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 22:34:33] ================================================================================
+[2026-08-24 22:34:44] ================================================================================
+[2026-08-24 22:34:44] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:34:44] ================================================================================
+[2026-08-24 22:34:44] Loaded scanner file with 12 mappings
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:34:44]   → Trying device[0].parameters[4]...
+[2026-08-24 22:34:44]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 22:34:44]     Current value: 0.0
+[2026-08-24 22:34:44]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:34:44]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:34:44]   → Trying device[0].parameters[4]...
+[2026-08-24 22:34:44]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 22:34:44]     Current value: 0.0
+[2026-08-24 22:34:44]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:34:44]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:34:44]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:34:44] 
+[2026-08-24 22:34:44] ================================================================================
+[2026-08-24 22:34:44] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 22:34:44] ================================================================================
+[2026-08-24 22:59:32] ================================================================================
+[2026-08-24 22:59:32] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:59:32] ================================================================================
+[2026-08-24 22:59:32] Loaded scanner file with 12 mappings
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:59:32]   → Trying device[0].parameters[4]...
+[2026-08-24 22:59:32]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:59:32]   → Trying device[0].parameters[4]...
+[2026-08-24 22:59:32]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:59:32]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:32] 
+[2026-08-24 22:59:32] ================================================================================
+[2026-08-24 22:59:32] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 22:59:32] ================================================================================
+[2026-08-24 22:59:40] ================================================================================
+[2026-08-24 22:59:40] INDEX-BASED LOOKUP TEST
+[2026-08-24 22:59:40] ================================================================================
+[2026-08-24 22:59:40] Loaded scanner file with 12 mappings
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:59:40]   → Trying device[0].parameters[4]...
+[2026-08-24 22:59:40]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 22:59:40]     Current value: 0.0
+[2026-08-24 22:59:40]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:59:40]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 22:59:40]   → Trying device[0].parameters[4]...
+[2026-08-24 22:59:40]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 22:59:40]     Current value: 0.0
+[2026-08-24 22:59:40]     Scanner expected: 'MacroControls.3'
+[2026-08-24 22:59:40]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 22:59:40]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 22:59:40] 
+[2026-08-24 22:59:40] ================================================================================
+[2026-08-24 22:59:40] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 22:59:40] ================================================================================
+[2026-08-24 23:28:47] ================================================================================
+[2026-08-24 23:28:47] INDEX-BASED LOOKUP TEST
+[2026-08-24 23:28:47] ================================================================================
+[2026-08-24 23:28:47] Loaded scanner file with 12 mappings
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 23:28:47]   → Trying device[0].parameters[4]...
+[2026-08-24 23:28:47]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 23:28:47]   → Trying device[0].parameters[4]...
+[2026-08-24 23:28:47]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 23:28:47]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:28:47] 
+[2026-08-24 23:28:47] ================================================================================
+[2026-08-24 23:28:47] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-24 23:28:47] ================================================================================
+[2026-08-24 23:29:11] ================================================================================
+[2026-08-24 23:29:11] INDEX-BASED LOOKUP TEST
+[2026-08-24 23:29:11] ================================================================================
+[2026-08-24 23:29:11] Loaded scanner file with 12 mappings
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-24 23:29:11]   → Trying device[0].parameters[4]...
+[2026-08-24 23:29:11]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-24 23:29:11]     Current value: 0.0
+[2026-08-24 23:29:11]     Scanner expected: 'MacroControls.3'
+[2026-08-24 23:29:11]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-24 23:29:11]   → Trying device[0].parameters[4]...
+[2026-08-24 23:29:11]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-24 23:29:11]     Current value: 0.0
+[2026-08-24 23:29:11]     Scanner expected: 'MacroControls.3'
+[2026-08-24 23:29:11]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-24 23:29:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-24 23:29:11] 
+[2026-08-24 23:29:11] ================================================================================
+[2026-08-24 23:29:11] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-24 23:29:11] ================================================================================
+[2026-08-25 09:12:49] ================================================================================
+[2026-08-25 09:12:49] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:12:49] ================================================================================
+[2026-08-25 09:12:49] Loaded scanner file with 12 mappings
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:12:49]   → Trying device[0].parameters[4]...
+[2026-08-25 09:12:49]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:12:49]   → Trying device[0].parameters[4]...
+[2026-08-25 09:12:49]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:12:49]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:12:49] 
+[2026-08-25 09:12:49] ================================================================================
+[2026-08-25 09:12:49] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-25 09:12:49] ================================================================================
+[2026-08-25 09:13:11] ================================================================================
+[2026-08-25 09:13:11] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:13:11] ================================================================================
+[2026-08-25 09:13:11] Loaded scanner file with 12 mappings
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:13:11]   → Trying device[0].parameters[4]...
+[2026-08-25 09:13:11]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 09:13:11]     Current value: 0.0
+[2026-08-25 09:13:11]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:13:11]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:13:11]   → Trying device[0].parameters[4]...
+[2026-08-25 09:13:11]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 09:13:11]     Current value: 0.0
+[2026-08-25 09:13:11]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:13:11]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:13:11]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:13:11] 
+[2026-08-25 09:13:11] ================================================================================
+[2026-08-25 09:13:11] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 09:13:11] ================================================================================
+[2026-08-25 09:44:54] ================================================================================
+[2026-08-25 09:44:54] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:44:54] ================================================================================
+[2026-08-25 09:44:54] Loaded scanner file with 12 mappings
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:44:54]   → Trying device[0].parameters[4]...
+[2026-08-25 09:44:54]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:44:54]   → Trying device[0].parameters[4]...
+[2026-08-25 09:44:54]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:44:54]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:44:54] 
+[2026-08-25 09:44:54] ================================================================================
+[2026-08-25 09:44:54] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-25 09:44:54] ================================================================================
+[2026-08-25 09:45:06] ================================================================================
+[2026-08-25 09:45:06] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:45:06] ================================================================================
+[2026-08-25 09:45:06] Loaded scanner file with 12 mappings
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:45:06]   → Trying device[0].parameters[4]...
+[2026-08-25 09:45:06]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 09:45:06]     Current value: 0.0
+[2026-08-25 09:45:06]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:45:06]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:45:06]   → Trying device[0].parameters[4]...
+[2026-08-25 09:45:06]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 09:45:06]     Current value: 0.0
+[2026-08-25 09:45:06]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:45:06]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:45:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:45:06] 
+[2026-08-25 09:45:06] ================================================================================
+[2026-08-25 09:45:06] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 09:45:06] ================================================================================
+[2026-08-25 09:47:28] ================================================================================
+[2026-08-25 09:47:28] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:47:28] ================================================================================
+[2026-08-25 09:47:28] Loaded scanner file with 12 mappings
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:47:28]   → Trying device[0].parameters[4]...
+[2026-08-25 09:47:28]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:47:28]   → Trying device[0].parameters[4]...
+[2026-08-25 09:47:28]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:47:28]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:28] 
+[2026-08-25 09:47:28] ================================================================================
+[2026-08-25 09:47:28] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-25 09:47:28] ================================================================================
+[2026-08-25 09:47:36] ================================================================================
+[2026-08-25 09:47:36] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:47:36] ================================================================================
+[2026-08-25 09:47:36] Loaded scanner file with 12 mappings
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:47:36]   → Trying device[0].parameters[4]...
+[2026-08-25 09:47:36]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 09:47:36]     Current value: 0.0
+[2026-08-25 09:47:36]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:47:36]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:47:36]   → Trying device[0].parameters[4]...
+[2026-08-25 09:47:36]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 09:47:36]     Current value: 0.0
+[2026-08-25 09:47:36]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:47:36]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:47:36]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:47:36] 
+[2026-08-25 09:47:36] ================================================================================
+[2026-08-25 09:47:36] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 09:47:36] ================================================================================
+[2026-08-25 09:54:03] ================================================================================
+[2026-08-25 09:54:03] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:54:03] ================================================================================
+[2026-08-25 09:54:03] Loaded scanner file with 12 mappings
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:54:03]   → Trying device[0].parameters[4]...
+[2026-08-25 09:54:03]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 09:54:03]     Current value: 0.0
+[2026-08-25 09:54:03]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:54:03]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:54:03]   → Trying device[0].parameters[4]...
+[2026-08-25 09:54:03]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 09:54:03]     Current value: 0.0
+[2026-08-25 09:54:03]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:54:03]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:54:03]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:54:03] 
+[2026-08-25 09:54:03] ================================================================================
+[2026-08-25 09:54:03] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 09:54:03] ================================================================================
+[2026-08-25 09:55:37] ================================================================================
+[2026-08-25 09:55:37] INDEX-BASED LOOKUP TEST
+[2026-08-25 09:55:37] ================================================================================
+[2026-08-25 09:55:37] Loaded scanner file with 12 mappings
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:55:37]   → Trying device[0].parameters[4]...
+[2026-08-25 09:55:37]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 09:55:37]     Current value: 0.0
+[2026-08-25 09:55:37]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:55:37]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 09:55:37]   → Trying device[0].parameters[4]...
+[2026-08-25 09:55:37]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 09:55:37]     Current value: 0.0
+[2026-08-25 09:55:37]     Scanner expected: 'MacroControls.3'
+[2026-08-25 09:55:37]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 09:55:37]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 09:55:37] 
+[2026-08-25 09:55:37] ================================================================================
+[2026-08-25 09:55:37] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 09:55:37] ================================================================================
+[2026-08-25 10:00:17] ================================================================================
+[2026-08-25 10:00:17] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:00:17] ================================================================================
+[2026-08-25 10:00:17] Loaded scanner file with 12 mappings
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:00:17]   → Trying device[0].parameters[4]...
+[2026-08-25 10:00:17]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:00:17]   → Trying device[0].parameters[4]...
+[2026-08-25 10:00:17]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:00:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:17] 
+[2026-08-25 10:00:17] ================================================================================
+[2026-08-25 10:00:17] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-25 10:00:17] ================================================================================
+[2026-08-25 10:00:26] ================================================================================
+[2026-08-25 10:00:26] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:00:26] ================================================================================
+[2026-08-25 10:00:26] Loaded scanner file with 12 mappings
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:00:26]   → Trying device[0].parameters[4]...
+[2026-08-25 10:00:26]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 10:00:26]     Current value: 0.0
+[2026-08-25 10:00:26]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:00:26]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:00:26]   → Trying device[0].parameters[4]...
+[2026-08-25 10:00:26]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 10:00:26]     Current value: 0.0
+[2026-08-25 10:00:26]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:00:26]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:00:26]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:00:26] 
+[2026-08-25 10:00:26] ================================================================================
+[2026-08-25 10:00:26] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 10:00:26] ================================================================================
+[2026-08-25 10:11:14] ================================================================================
+[2026-08-25 10:11:14] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:11:14] ================================================================================
+[2026-08-25 10:11:14] Loaded scanner file with 12 mappings
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:11:14]   → Trying device[0].parameters[4]...
+[2026-08-25 10:11:14]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:11:14]   → Trying device[0].parameters[4]...
+[2026-08-25 10:11:14]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:11:14]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:14] 
+[2026-08-25 10:11:14] ================================================================================
+[2026-08-25 10:11:14] TEST COMPLETE: 0 SUCCESS, 12 FAIL
+[2026-08-25 10:11:14] ================================================================================
+[2026-08-25 10:11:24] ================================================================================
+[2026-08-25 10:11:24] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:11:24] ================================================================================
+[2026-08-25 10:11:24] Loaded scanner file with 12 mappings
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:11:24]   → Trying device[0].parameters[4]...
+[2026-08-25 10:11:24]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 10:11:24]     Current value: 0.0
+[2026-08-25 10:11:24]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:11:24]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:11:24]   → Trying device[0].parameters[4]...
+[2026-08-25 10:11:24]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 10:11:24]     Current value: 0.0
+[2026-08-25 10:11:24]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:11:24]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:11:24]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:11:24] 
+[2026-08-25 10:11:24] ================================================================================
+[2026-08-25 10:11:24] TEST COMPLETE: 2 SUCCESS, 10 FAIL
+[2026-08-25 10:11:24] ================================================================================
+[2026-08-25 10:12:50] ================================================================================
+[2026-08-25 10:12:50] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:12:50] ================================================================================
+[2026-08-25 10:12:50] Loaded scanner file with 14 mappings
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:12:50]   → Trying device[0].parameters[4]...
+[2026-08-25 10:12:50]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:12:50]   → Trying device[0].parameters[4]...
+[2026-08-25 10:12:50]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 10:12:50]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 10:12:50]   ❌ FAIL - Invalid track_index 4
+[2026-08-25 10:12:50] 
+[2026-08-25 10:12:50] ================================================================================
+[2026-08-25 10:12:50] TEST COMPLETE: 0 SUCCESS, 14 FAIL
+[2026-08-25 10:12:50] ================================================================================
+[2026-08-25 10:12:58] ================================================================================
+[2026-08-25 10:12:58] INDEX-BASED LOOKUP TEST
+[2026-08-25 10:12:58] ================================================================================
+[2026-08-25 10:12:58] Loaded scanner file with 14 mappings
+[2026-08-25 10:12:58] 
+[2026-08-25 10:12:58] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 10:12:58]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:58] 
+[2026-08-25 10:12:58] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:12:58]   → Trying device[0].parameters[4]...
+[2026-08-25 10:12:58]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 10:12:58]     Current value: 0.0
+[2026-08-25 10:12:58]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:12:58]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 10:12:58] 
+[2026-08-25 10:12:58] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 10:12:58]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:58] 
+[2026-08-25 10:12:58] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 10:12:58]   → Trying device[0].parameters[4]...
+[2026-08-25 10:12:58]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 10:12:58]     Current value: 0.0
+[2026-08-25 10:12:58]     Scanner expected: 'MacroControls.3'
+[2026-08-25 10:12:58]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 10:12:59]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 10:12:59]   → Trying device[0].parameters[1]...
+[2026-08-25 10:12:59]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 10:12:59]     Current value: 0.0
+[2026-08-25 10:12:59]     Scanner expected: 'Reverse'
+[2026-08-25 10:12:59] 
+[2026-08-25 10:12:59] ================================================================================
+[2026-08-25 10:12:59] TEST COMPLETE: 3 SUCCESS, 11 FAIL
+[2026-08-25 10:12:59] ================================================================================
+[2026-08-25 11:00:06] ================================================================================
+[2026-08-25 11:00:06] INDEX-BASED LOOKUP TEST
+[2026-08-25 11:00:06] ================================================================================
+[2026-08-25 11:00:06] Loaded scanner file with 15 mappings
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:00:06]   → Trying device[0].parameters[4]...
+[2026-08-25 11:00:06]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:00:06]   → Trying device[0].parameters[4]...
+[2026-08-25 11:00:06]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 11:00:06]   ❌ FAIL - Invalid track_index 4
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 11:00:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:06] 
+[2026-08-25 11:00:06] ================================================================================
+[2026-08-25 11:00:06] TEST COMPLETE: 0 SUCCESS, 15 FAIL
+[2026-08-25 11:00:06] ================================================================================
+[2026-08-25 11:00:19] ================================================================================
+[2026-08-25 11:00:19] INDEX-BASED LOOKUP TEST
+[2026-08-25 11:00:19] ================================================================================
+[2026-08-25 11:00:19] Loaded scanner file with 15 mappings
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:00:19]   → Trying device[0].parameters[4]...
+[2026-08-25 11:00:19]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 11:00:19]     Current value: 0.0
+[2026-08-25 11:00:19]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:00:19]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:00:19]   → Trying device[0].parameters[4]...
+[2026-08-25 11:00:19]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 11:00:19]     Current value: 0.0
+[2026-08-25 11:00:19]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:00:19]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 11:00:19]   → Trying device[0].parameters[1]...
+[2026-08-25 11:00:19]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 11:00:19]     Current value: 0.0
+[2026-08-25 11:00:19]     Scanner expected: 'Reverse'
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 11:00:19]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:00:19] 
+[2026-08-25 11:00:19] ================================================================================
+[2026-08-25 11:00:19] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 11:00:19] ================================================================================
+[2026-08-25 11:38:18] ================================================================================
+[2026-08-25 11:38:18] INDEX-BASED LOOKUP TEST
+[2026-08-25 11:38:18] ================================================================================
+[2026-08-25 11:38:18] Loaded scanner file with 15 mappings
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:38:18]   → Trying device[0].parameters[4]...
+[2026-08-25 11:38:18]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:38:18]   → Trying device[0].parameters[4]...
+[2026-08-25 11:38:18]   ❌ FAIL - device_index 0 out of range (track has 0 devices)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 11:38:18]   ❌ FAIL - Invalid track_index 4
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 11:38:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:18] 
+[2026-08-25 11:38:18] ================================================================================
+[2026-08-25 11:38:18] TEST COMPLETE: 0 SUCCESS, 15 FAIL
+[2026-08-25 11:38:18] ================================================================================
+[2026-08-25 11:38:34] ================================================================================
+[2026-08-25 11:38:34] INDEX-BASED LOOKUP TEST
+[2026-08-25 11:38:34] ================================================================================
+[2026-08-25 11:38:34] Loaded scanner file with 15 mappings
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:38:34]   → Trying device[0].parameters[4]...
+[2026-08-25 11:38:34]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 11:38:34]     Current value: 0.0
+[2026-08-25 11:38:34]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:38:34]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:38:34]   → Trying device[0].parameters[4]...
+[2026-08-25 11:38:34]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 11:38:34]     Current value: 0.0
+[2026-08-25 11:38:34]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:38:34]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 11:38:34]   → Trying device[0].parameters[1]...
+[2026-08-25 11:38:34]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 11:38:34]     Current value: 0.0
+[2026-08-25 11:38:34]     Scanner expected: 'Reverse'
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 11:38:34]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:38:34] 
+[2026-08-25 11:38:34] ================================================================================
+[2026-08-25 11:38:34] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 11:38:34] ================================================================================
+[2026-08-25 11:40:17] ================================================================================
+[2026-08-25 11:40:17] INDEX-BASED LOOKUP TEST
+[2026-08-25 11:40:17] ================================================================================
+[2026-08-25 11:40:17] Loaded scanner file with 15 mappings
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:40:17]   → Trying device[0].parameters[4]...
+[2026-08-25 11:40:17]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 11:40:17]     Current value: 0.0
+[2026-08-25 11:40:17]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:40:17]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 11:40:17]   → Trying device[0].parameters[4]...
+[2026-08-25 11:40:17]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 11:40:17]     Current value: 0.0
+[2026-08-25 11:40:17]     Scanner expected: 'MacroControls.3'
+[2026-08-25 11:40:17]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 11:40:17]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:17] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 11:40:17]   → Trying device[0].parameters[1]...
+[2026-08-25 11:40:17]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 11:40:17]     Current value: 0.0
+[2026-08-25 11:40:17]     Scanner expected: 'Reverse'
+[2026-08-25 11:40:17] 
+[2026-08-25 11:40:18] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 11:40:18]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 11:40:18] 
+[2026-08-25 11:40:18] ================================================================================
+[2026-08-25 11:40:18] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 11:40:18] ================================================================================
+[2026-08-25 13:09:06] ================================================================================
+[2026-08-25 13:09:06] INDEX-BASED LOOKUP TEST
+[2026-08-25 13:09:06] ================================================================================
+[2026-08-25 13:09:06] Loaded scanner file with 15 mappings
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:09:06]   → Trying device[0].parameters[4]...
+[2026-08-25 13:09:06]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 13:09:06]     Current value: 0.0
+[2026-08-25 13:09:06]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:09:06]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:09:06]   → Trying device[0].parameters[4]...
+[2026-08-25 13:09:06]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 13:09:06]     Current value: 0.0
+[2026-08-25 13:09:06]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:09:06]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 13:09:06]   → Trying device[0].parameters[1]...
+[2026-08-25 13:09:06]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 13:09:06]     Current value: 0.0
+[2026-08-25 13:09:06]     Scanner expected: 'Reverse'
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 13:09:06]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:09:06] 
+[2026-08-25 13:09:06] ================================================================================
+[2026-08-25 13:09:06] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 13:09:06] ================================================================================
+[2026-08-25 13:22:23] ================================================================================
+[2026-08-25 13:22:23] INDEX-BASED LOOKUP TEST
+[2026-08-25 13:22:23] ================================================================================
+[2026-08-25 13:22:23] Loaded scanner file with 15 mappings
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:22:23]   → Trying device[0].parameters[4]...
+[2026-08-25 13:22:23]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 13:22:23]     Current value: 0.0
+[2026-08-25 13:22:23]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:22:23]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:22:23]   → Trying device[0].parameters[4]...
+[2026-08-25 13:22:23]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 13:22:23]     Current value: 0.0
+[2026-08-25 13:22:23]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:22:23]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 13:22:23]   → Trying device[0].parameters[1]...
+[2026-08-25 13:22:23]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 13:22:23]     Current value: 0.0
+[2026-08-25 13:22:23]     Scanner expected: 'Reverse'
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 13:22:23]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:22:23] 
+[2026-08-25 13:22:23] ================================================================================
+[2026-08-25 13:22:23] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 13:22:23] ================================================================================
+[2026-08-25 13:55:48] ================================================================================
+[2026-08-25 13:55:48] INDEX-BASED LOOKUP TEST
+[2026-08-25 13:55:48] ================================================================================
+[2026-08-25 13:55:48] Loaded scanner file with 15 mappings
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:55:48]   → Trying device[0].parameters[4]...
+[2026-08-25 13:55:48]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 13:55:48]     Current value: 0.0
+[2026-08-25 13:55:48]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:55:48]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 13:55:48]   → Trying device[0].parameters[4]...
+[2026-08-25 13:55:48]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 13:55:48]     Current value: 0.0
+[2026-08-25 13:55:48]     Scanner expected: 'MacroControls.3'
+[2026-08-25 13:55:48]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 13:55:48]   → Trying device[0].parameters[1]...
+[2026-08-25 13:55:48]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 13:55:48]     Current value: 0.0
+[2026-08-25 13:55:48]     Scanner expected: 'Reverse'
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 13:55:48]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 13:55:48] 
+[2026-08-25 13:55:48] ================================================================================
+[2026-08-25 13:55:48] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 13:55:48] ================================================================================
+[2026-08-25 15:30:15] ================================================================================
+[2026-08-25 15:30:15] INDEX-BASED LOOKUP TEST
+[2026-08-25 15:30:15] ================================================================================
+[2026-08-25 15:30:15] Loaded scanner file with 15 mappings
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 15:30:15]   → Trying device[0].parameters[4]...
+[2026-08-25 15:30:15]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 15:30:15]     Current value: 0.0
+[2026-08-25 15:30:15]     Scanner expected: 'MacroControls.3'
+[2026-08-25 15:30:15]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 15:30:15]   → Trying device[0].parameters[4]...
+[2026-08-25 15:30:15]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 15:30:15]     Current value: 0.0
+[2026-08-25 15:30:15]     Scanner expected: 'MacroControls.3'
+[2026-08-25 15:30:15]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 15:30:15]   → Trying device[0].parameters[1]...
+[2026-08-25 15:30:15]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 15:30:15]     Current value: 0.0
+[2026-08-25 15:30:15]     Scanner expected: 'Reverse'
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 15:30:15]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:30:15] 
+[2026-08-25 15:30:15] ================================================================================
+[2026-08-25 15:30:15] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 15:30:15] ================================================================================
+[2026-08-25 15:49:00] ================================================================================
+[2026-08-25 15:49:00] INDEX-BASED LOOKUP TEST
+[2026-08-25 15:49:00] ================================================================================
+[2026-08-25 15:49:00] Loaded scanner file with 15 mappings
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 0 (1-4 OSC), CC72: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 0 (1-4 OSC), CC73: param_tag='MacroControls.3'
+[2026-08-25 15:49:00]   → Trying device[0].parameters[4]...
+[2026-08-25 15:49:00]   ✓ SUCCESS - Found 'Reverb' in device '4 OSC'
+[2026-08-25 15:49:00]     Current value: 0.0
+[2026-08-25 15:49:00]     Scanner expected: 'MacroControls.3'
+[2026-08-25 15:49:00]     ⚠️  WARNING: Name mismatch! (Live='Reverb' vs Scanner='MacroControls.3')
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 1 (2-3 OP Boom), CC72: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 1 (2-3 OP Boom), CC73: param_tag='MacroControls.3'
+[2026-08-25 15:49:00]   → Trying device[0].parameters[4]...
+[2026-08-25 15:49:00]   ✓ SUCCESS - Found 'Macro 4' in device '3 OP Boom'
+[2026-08-25 15:49:00]     Current value: 0.0
+[2026-08-25 15:49:00]     Scanner expected: 'MacroControls.3'
+[2026-08-25 15:49:00]     ⚠️  WARNING: Name mismatch! (Live='Macro 4' vs Scanner='MacroControls.3')
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 2 (3-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 2 (3-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 2 (3-Instrument Rack), CC77: param_tag='Makeup'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 3 (4-Instrument Rack), CC72: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 3 (4-Instrument Rack), CC73: param_tag='ExcitatorDamping'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 3 (4-Instrument Rack), CC77: param_tag='DryWet'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 3 (4-Instrument Rack), CC76: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-3, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 3 (4-Instrument Rack), CC75: param_tag='ChainSelector'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 4 (5-Good Old Vintage Phat 2 Lead), CC72: param_tag='Volume'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-2, param_index=0)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 4 (5-Good Old Vintage Phat 2 Lead), CC73: param_tag='Reverse'
+[2026-08-25 15:49:00]   → Trying device[0].parameters[1]...
+[2026-08-25 15:49:00]   ✓ SUCCESS - Found 'Reverse' in device 'Good Old Vintage Phat 2 Lead'
+[2026-08-25 15:49:00]     Current value: 0.0
+[2026-08-25 15:49:00]     Scanner expected: 'Reverse'
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] Track 4 (5-Good Old Vintage Phat 2 Lead), CC74: param_tag='Frequency'
+[2026-08-25 15:49:00]   ❌ SKIP - No indices (device_index=-1, param_index=-1)
+[2026-08-25 15:49:00] 
+[2026-08-25 15:49:00] ================================================================================
+[2026-08-25 15:49:00] TEST COMPLETE: 3 SUCCESS, 12 FAIL
+[2026-08-25 15:49:00] ================================================================================

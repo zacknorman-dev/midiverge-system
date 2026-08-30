@@ -368,50 +368,12 @@ print("USB MIDI + HID Controller Ready!")
 print("Encoder 1: HID Volume/Mute")  
 print("Encoders 2-10: MIDI CC71-79")
 print("Buttons 2-9: MIDI CC81-88 (virtual encoders, toggle 10<->117)")
+print("Button 10: CC89 (rescan trigger)")
 
 # ══════════════════════════════════════════════════════════════════════════════
-# MAIN LOOP
+# MAIN LOOP - Interrupt-driven
 # ══════════════════════════════════════════════════════════════════════════════
 
-while True:
-    # Read all GPIO states with interrupt detection
-    interrupt_detected = False
-    for chip_addr in [U2_ADDR, U3_ADDR, U4_ADDR, U5_ADDR]:
-        intcap = read_reg(chip_addr, MCP_INTCAP)  # Clears interrupt
-        if intcap != 0xFF:
-            interrupt_detected = True
-        gpio_states[chip_addr] = read_reg(chip_addr, MCP_GPIO)
-    
-    # Process encoders
-    for i in range(10):
-        gpio_addr, pin_a, pin_b, btn_gpio_addr, btn_pin, cc_num, cc_btn = ENCODERS[i]
-        
-        # Encoder processing
-        if i == 0:
-            process_encoder_volume(encoders[i], gpio_states[gpio_addr], pin_a, pin_b)
-        elif i == 9:
-            process_encoder_relative_127(encoders[i], gpio_states[gpio_addr], pin_a, pin_b, cc_num)
-        else:
-            process_encoder_relative(encoders[i], gpio_states[gpio_addr], pin_a, pin_b, cc_num)
-        
-        # Button processing
-        btn_state = (gpio_states[btn_gpio_addr] >> btn_pin) & 1
-        if btn_state != buttons[i].last_state and not btn_state:  # Button pressed (active low)
-            if cc_btn == CC_RESCAN:
-                # PERMANENTLY DISABLED - causes crash
-                print(f"CC{cc_btn} disabled (use Ableton restart for fresh scan)")
-            # Button 1 (index 0) is HID mute, others are MIDI
-            elif i == 0:
-                process_button_mute(buttons[i], btn_gpio_addr, btn_pin)
-            else:
-                process_button(buttons[i], btn_gpio_addr, btn_pin, cc_btn)
-            buttons[i].last_state = btn_state
-    
-    # No sleep - run loop as fast as possible to catch fast encoder turns
-print("Button 10: CC89 (rescan)")
-print("Interrupt-driven mode: U2(D6), U3(D2), U4(D0), U5(D1)")
-
-# Main loop - fully interrupt-driven
 while True:
     # Check each interrupt pin (active LOW)
     if not int_u2.value:  # U2 interrupt triggered

@@ -575,6 +575,8 @@ class MIDIOverlay:
             slot_index = cc - 71
             param_str = message.get('param_str', '--')
             param_value = message.get('param_value', 0.0)
+            param_min = message.get('param_min', 0.0)
+            param_max = message.get('param_max', 127.0)
             param_name = message.get('param_name', '')
             device_name = message.get('device_name', '')
             
@@ -592,8 +594,19 @@ class MIDIOverlay:
                 if slot_index < len(self.label_widgets):
                     self.label_widgets[slot_index].config(text=label_text)
             
+            # Normalize param_value to 0.0-1.0 using actual parameter min/max
+            # This correctly handles bipolar parameters (e.g., Pan: -50 to +50, Tuning: -48 to +48)
+            param_range = param_max - param_min
+            if param_range > 0:
+                normalized_value = (param_value - param_min) / param_range
+            else:
+                normalized_value = 0.0
+            
+            # Clamp to 0.0-1.0 range for safety
+            normalized_value = max(0.0, min(1.0, normalized_value))
+            
             # Update display for this encoder
-            self.update_value_display(slot_index, param_str, param_value)
+            self.update_value_display(slot_index, param_str, normalized_value)
     
     def show_scanning_popup(self):
         """Show 'Scanning...' popup in center of screen"""

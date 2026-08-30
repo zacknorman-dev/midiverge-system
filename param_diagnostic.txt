@@ -1,0 +1,29 @@
+=== CC77 MFL PATH TEST ===
+Target: Track 2, Device 2, Parameter 3 (Output)
+
+Track[2]: 3-Instrument Rack
+Device[2]: Glue Compressor
+Class: GlueCompressor
+
+Parameter[3]:
+  name: Output
+  original_name: Output
+  value: 0.0
+
+=== MFL PATH CONSTRUCTION ===
+Walking canonical_parent chain:
+  [0] obj=DeviceParameter, parent=Device
+       -> Found in parent.parameters[3]
+  [1] obj=Device, parent=Track
+       -> Found in parent.devices[2]
+  [2] obj=Track, parent=Song
+       -> Found in parent.tracks[2]
+  [3] obj=Song, parent=NoneType
+       -> Could not determine collection
+
+=== RESULT ===
+MFL Path: live_set tracks 2 devices 2 parameters 3
+Expected: live_set tracks 2 devices 2 parameters 3
+Match: YES
+
+=== END TEST ===

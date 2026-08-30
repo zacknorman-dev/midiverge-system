@@ -1,53 +1,111 @@
 {
   "track_4-Instrument_Rack_cc_73": {
-    "mfl_path": "live_set tracks 3 devices 0 chains 0 devices 0 parameters 43"
+    "mfl_path": "live_set tracks 3 devices 0 chains 0 devices 0 parameters 43",
+    "observed_min": 0.59375,
+    "observed_max": 1.0
   },
   "track_3-Instrument_Rack_cc_77": {
-    "mfl_path": "live_set tracks 2 devices 2 parameters 3"
+    "mfl_path": "live_set tracks 2 devices 2 parameters 3",
+    "observed_min": 13.28125,
+    "observed_max": 20.0
   },
   "track_5-Good_Old_Vintage_Phat_2_Lead_cc_74": {
-    "nav_path": [
-      {
-        "type": "devices",
-        "index": 0
-      },
-      {
-        "type": "parameters",
-        "index": 95
-      }
-    ]
+    "mfl_path": "live_set tracks 4 devices 0 parameters 95",
+    "observed_min": 0.6484375,
+    "observed_max": 0.953125
   },
   "track_1-4_OSC_cc_73": {
-    "display_name": "Reverb"
+    "mfl_path": "live_set tracks 0 devices 0 parameters 4",
+    "observed_min": 96.2421875,
+    "observed_max": 127.0
   },
   "track_2-3_OP_Boom_cc_73": {
-    "display_name": "BOOMBAH"
+    "mfl_path": "live_set tracks 1 devices 0 parameters 4",
+    "observed_min": 47.625,
+    "observed_max": 127.0
   },
   "track_3-Instrument_Rack_cc_75": {
-    "display_name": "Patch"
+    "mfl_path": "live_set tracks 2 devices 0 parameters 17",
+    "display_name": "Patch",
+    "observed_min": 1.0,
+    "observed_max": 10.0
   },
   "track_4-Instrument_Rack_cc_77": {
-    "mfl_path": "live_set tracks 3 devices 0 chains 0 devices 1 parameters 52"
+    "mfl_path": "live_set tracks 3 devices 0 chains 0 devices 1 parameters 52",
+    "observed_min": 0.0,
+    "observed_max": 20.0
   },
   "track_3-Instrument_Rack_cc_76": {
-    "mfl_path": "live_set tracks 2 devices 0 chains 1 mixer_device volume"
+    "mfl_path": "live_set tracks 2 devices 0 chains 1 mixer_device volume",
+    "observed_min": 0.5234375,
+    "observed_max": 1.0
   },
   "track_4-Instrument_Rack_cc_76": {
-    "mfl_path": "live_set tracks 3 devices 0 chains 0 mixer_device volume"
+    "mfl_path": "live_set tracks 3 devices 0 chains 0 mixer_device volume",
+    "observed_min": 0.3125,
+    "observed_max": 1.0
   },
   "track_6-Balafon_Brushed_cc_73": {
-    "mfl_path": "live_set tracks 5 devices 0 parameters 35"
+    "mfl_path": "live_set tracks 5 devices 0 parameters 35",
+    "observed_min": 0.0,
+    "observed_max": 22.0
   },
   "track_6-Balafon_Brushed_cc_72": {
     "mfl_path": "live_set tracks 5 devices 0 parameters 8"
   },
   "track_7-Growl_Bass_cc_74": {
-    "mfl_path": "live_set tracks 6 devices 0 parameters 112"
+    "mfl_path": "live_set tracks 6 devices 0 parameters 112",
+    "observed_min": 0.171875,
+    "observed_max": 1.0
   },
   "track_7-Growl_Bass_cc_73": {
-    "mfl_path": "live_set tracks 6 devices 0 parameters 20"
+    "mfl_path": "live_set tracks 6 devices 0 parameters 20",
+    "observed_min": 0.5234375,
+    "observed_max": 0.5234375
   },
   "track_7-Growl_Bass_cc_72": {
-    "mfl_path": "live_set tracks 6 devices 0 parameters 73"
+    "mfl_path": "live_set tracks 6 devices 0 parameters 73",
+    "observed_min": 0.6484375,
+    "observed_max": 5.0
+  },
+  "track_4_B-3_Organ_cc_74": {
+    "mfl_path": "live_set tracks 3 devices 1 parameters 15"
+  },
+  "track_4-Instrument_Rack_cc_75": {
+    "mfl_path": "live_set tracks 3 devices 0 parameters 17",
+    "display_name": "Patch",
+    "observed_min": 0.0,
+    "observed_max": 1.0
+  },
+  "track_4-Instrument_Rack_cc_72": {
+    "observed_min": 0.6484375,
+    "observed_max": 0.8203125,
+    "mfl_path": "live_set tracks 3 mixer_device volume"
+  },
+  "track_5-Good_Old_Vintage_Phat_2_Lead_cc_72": {
+    "observed_min": 0.6484375,
+    "observed_max": 0.8203125,
+    "mfl_path": "live_set tracks 4 mixer_device volume"
+  },
+  "track_5-Good_Old_Vintage_Phat_2_Lead_cc_73": {
+    "observed_min": 0.0,
+    "observed_max": 1.0
+  },
+  "track_6-Balafon_Brushed_cc_74": {
+    "observed_min": -1.0,
+    "observed_max": 1.0
+  },
+  "track_2-3_OP_Boom_cc_72": {
+    "observed_min": 0.453125,
+    "observed_max": 0.9921875,
+    "mfl_path": "live_set tracks 1 mixer_device volume"
+  },
+  "track_1-4_OSC_cc_72": {
+    "observed_min": 0.3984375,
+    "observed_max": 0.78125,
+    "mfl_path": "live_set tracks 0 mixer_device volume"
+  },
+  "track_1-MIDI_cc_72": {
+    "mfl_path": "live_set tracks 0 mixer_device volume"
   }
 }
